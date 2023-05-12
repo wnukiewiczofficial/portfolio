@@ -1,5 +1,5 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import imgMe from "./assets/me.jpg";
+import imgMe from "../assets/me.jpg";
 
 export default function MyCard() {
   return (

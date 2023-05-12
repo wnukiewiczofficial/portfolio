@@ -1,4 +1,4 @@
-import MyCard from "../mycard";
+import MyCard from "./components/mycard";
 
 export default function Display() {
   return (
