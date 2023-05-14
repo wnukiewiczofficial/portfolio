@@ -3,7 +3,7 @@ import imgMe from "../assets/me.jpg";
 
 export default function MyCard() {
   return (
-    <header className="w-96 flex flex-col gap-2 bg-gray-700 p-4 rounded-lg text-center place-items-center">
+    <div className="w-full flex flex-col gap-2 bg-gray-700 p-4 rounded-lg text-center place-items-center">
       <img src={imgMe} alt="Picture of me" className="rounded-xl -mt-12" />
       <div>
         <h1>Dawid Wnukiewicz</h1>
@@ -18,6 +18,6 @@ export default function MyCard() {
         <span>E-mail</span>
         <span>Location</span>
       </div>
-    </header>
+    </div>
   );
 }
