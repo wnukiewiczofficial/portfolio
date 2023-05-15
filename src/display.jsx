@@ -11,19 +11,19 @@ export default function Display() {
   return (
     <main
       className={
-        "w-screen h-screen bg-blue-400 text-white overflow-hidden relative"
+        "w-screen h-screen bg-blue-400 lg:grid lg:grid-cols-2 lg:p-8 text-white overflow-hidden relative"
       }
     >
       <header
         ref={cardRef}
-        className="flex flex-col h-full p-6 gap-6 justify-center items-center"
+        className="lg:row-span-2 flex flex-col h-full p-6 gap-6 justify-center items-center"
       >
         <MyCard />
       </header>
       <NavBar cardRef={cardRef} contentRef={contentRef} />
       <section
         ref={contentRef}
-        className="bg-gray-700 rounded-lg p-6 pt-40 h-screen"
+        className="bg-gray-700 rounded-lg p-6 pt-40 lg:pt-6 h-screen lg:h-full"
       >
         <Routes>
           <Route path="/" element={null} />
