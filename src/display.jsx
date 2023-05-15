@@ -16,12 +16,15 @@ export default function Display() {
     >
       <header
         ref={cardRef}
-        className="flex flex-col h-full p-6 bg-red-500 gap-6 justify-center items-center"
+        className="flex flex-col h-full p-6 gap-6 justify-center items-center"
       >
         <MyCard />
       </header>
       <NavBar cardRef={cardRef} contentRef={contentRef} />
-      <section ref={contentRef} className="bg-gray-700 rounded-lg p-6 h-screen">
+      <section
+        ref={contentRef}
+        className="bg-gray-700 rounded-lg p-6 pt-40 h-screen"
+      >
         <Routes>
           <Route path="/" element={null} />
           <Route path="/me" element={<Me />} />

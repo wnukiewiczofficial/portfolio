@@ -1,6 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { HiChevronDoubleUp } from "react-icons/hi";
+import {
+  HiUser,
+  HiClipboardList,
+  HiCode,
+  HiChatAlt,
+  HiChevronDoubleUp,
+} from "react-icons/hi";
 
 export default function NavBar({ cardRef, contentRef }) {
   const [inContent, setInContent] = useState();
@@ -24,22 +30,22 @@ export default function NavBar({ cardRef, contentRef }) {
       >
         <ul className="flex h-full items-center justify-around text-xl relative">
           <Link to="/me" onClick={() => !inContent && setInContent(true)}>
-            <li>Me</li>
+            <HiUser className="text-5xl" />
           </Link>
           <Link to="/" onClick={() => !inContent && setInContent(true)}>
-            <li>Resume</li>
+            <HiClipboardList className="text-5xl" />
           </Link>
           <Link to="/" onClick={() => !inContent && setInContent(true)}>
-            <li>Projects</li>
+            <HiCode className="text-5xl" />
           </Link>
           <Link to="/" onClick={() => !inContent && setInContent(true)}>
-            <li>Contact</li>
+            <HiChatAlt className="text-5xl" />
           </Link>
         </ul>
       </nav>
       <div className="absolute flex h-20 justify-center top-full translate-y-full w-full p-4 rounded-lg transition duration-200 z-10">
         <Link to="/" onClick={() => inContent && setInContent(false)}>
-          To the top
+          <HiChevronDoubleUp className="text-2xl" />
         </Link>
       </div>
     </>
