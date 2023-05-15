@@ -1,12 +1,47 @@
-export default function NavBar() {
+import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
+import { HiChevronDoubleUp } from "react-icons/hi";
+
+export default function NavBar({ cardRef, contentRef }) {
+  const [inContent, setInContent] = useState();
+  const navRef = useRef();
+
+  useEffect(() => {
+    if (inContent) {
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
+      navRef.current.classList.remove("-translate-y-full");
+    } else {
+      navRef.current.classList.add("-translate-y-full");
+      cardRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [inContent]);
+
   return (
-    <nav className="w-full p-4 rounded-lg bg-gray-500">
-      <ul className="flex justify-around text-xl">
-        <li>Me</li>
-        <li>Resume</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
+    <>
+      <nav
+        ref={navRef}
+        className="absolute top-full h-20 left-1/2 -translate-x-1/2 -translate-y-full w-5/6 p-4 rounded-lg bg-gray-500 transition duration-200 z-20"
+      >
+        <ul className="flex h-full items-center justify-around text-xl relative">
+          <Link to="/me" onClick={() => !inContent && setInContent(true)}>
+            <li>Me</li>
+          </Link>
+          <Link to="/" onClick={() => !inContent && setInContent(true)}>
+            <li>Resume</li>
+          </Link>
+          <Link to="/" onClick={() => !inContent && setInContent(true)}>
+            <li>Projects</li>
+          </Link>
+          <Link to="/" onClick={() => !inContent && setInContent(true)}>
+            <li>Contact</li>
+          </Link>
+        </ul>
+      </nav>
+      <div className="absolute flex h-20 justify-center top-full translate-y-full w-full p-4 rounded-lg transition duration-200 z-10">
+        <Link to="/" onClick={() => inContent && setInContent(false)}>
+          To the top
+        </Link>
+      </div>
+    </>
   );
 }
