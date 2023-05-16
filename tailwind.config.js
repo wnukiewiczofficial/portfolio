@@ -10,6 +10,10 @@ export default {
         additionalTwo: "#a8d0e6",
         accent: "#f8e9a1",
       },
+      fontFamily: {
+        mitr: ["mitr", "sans-serif"],
+        bai: ["Bai Jamjuree", "sans-serif"],
+      },
     },
   },
   plugins: [],

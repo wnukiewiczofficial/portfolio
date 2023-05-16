@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./tailwind.css";
 import Display from "./display";
 import { HashRouter } from "react-router-dom";
 

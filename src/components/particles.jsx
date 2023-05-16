@@ -41,13 +41,13 @@ export default function ParticleBg() {
             value: 200,
           },
           opacity: {
-            value: { min: 0.4, max: 0.6 },
+            value: { min: 0.6, max: 0.8 },
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 3 },
+            value: { min: 3, max: 5 },
           },
         },
         detectRetina: true,
