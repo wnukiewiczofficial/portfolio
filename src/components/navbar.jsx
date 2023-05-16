@@ -15,9 +15,15 @@ export default function NavBar({ cardRef, contentRef }) {
   useEffect(() => {
     if (inContent) {
       contentRef.current.scrollIntoView({ behavior: "smooth" });
-      navRef.current.classList.remove("-translate-y-full");
+      navRef.current.classList.replace(
+        "-translate-y-[150%]",
+        "translate-y-1/2"
+      );
     } else {
-      navRef.current.classList.add("-translate-y-full");
+      navRef.current.classList.replace(
+        "translate-y-1/2",
+        "-translate-y-[150%]"
+      );
       cardRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [inContent]);
@@ -27,43 +33,79 @@ export default function NavBar({ cardRef, contentRef }) {
       {/* mobile */}
       <nav
         ref={navRef}
-        className="lg:hidden absolute top-full h-20 left-1/2 -translate-x-1/2 -translate-y-full w-5/6 p-4 rounded-lg bg-gray-500 transition duration-200 z-20"
+        className="lg:hidden absolute top-full h-20 left-1/2 -translate-x-1/2 -translate-y-[150%] w-5/6 rounded-2xl bg-themeTwo transition duration-200 z-20"
       >
-        <ul className="flex h-full items-center justify-around text-xl relative">
-          <Link to="/me" onClick={() => !inContent && setInContent(true)}>
-            <HiUser className="text-5xl md:text-2xl" />
+        <ul className="flex w-full h-full items-center justify-around text-sm">
+          <Link
+            to="/me"
+            onClick={() => !inContent && setInContent(true)}
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
+            <HiUser className="text-4xl" />
+            <span>Me</span>
           </Link>
-          <Link to="/" onClick={() => !inContent && setInContent(true)}>
-            <HiClipboardList className="text-5xl md:text-2xl" />
+          <Link
+            to="/"
+            onClick={() => !inContent && setInContent(true)}
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
+            <HiClipboardList className="text-4xl" />
+            <span>Resume</span>
           </Link>
-          <Link to="/" onClick={() => !inContent && setInContent(true)}>
-            <HiCode className="text-5xl md:text-2xl" />
+          <Link
+            to="/"
+            onClick={() => !inContent && setInContent(true)}
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
+            <HiCode className="text-4xl" />
+            <span>Projects</span>
           </Link>
-          <Link to="/" onClick={() => !inContent && setInContent(true)}>
-            <HiChatAlt className="text-5xl md:text-2xl" />
+          <Link
+            to="/"
+            onClick={() => !inContent && setInContent(true)}
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
+            <HiChatAlt className="text-4xl" />
+            <span>Contact</span>
           </Link>
         </ul>
       </nav>
       {/* desktop */}
-      <nav className="hidden lg:flex w-full p-4 h-20 rounded-lg bg-gray-500 transition duration-200">
-        <ul className="w-full flex h-full items-center justify-around text-xl relative">
-          <Link to="/me">
+      <nav className="hidden lg:flex self-start p-12 h-20 rounded-2xl bg-themeTwo transition duration-200">
+        <ul className="w-full flex gap-8 h-full items-center justify-between text-sm text-center relative">
+          <Link
+            to="/me"
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
             <HiUser className="text-5xl" />
+            <span>Me</span>
           </Link>
-          <Link to="/">
+          <Link
+            to="/"
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
             <HiClipboardList className="text-5xl" />
+            <span>Resume</span>
           </Link>
-          <Link to="/">
+          <Link
+            to="/"
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
             <HiCode className="text-5xl" />
+            <span>Projects</span>
           </Link>
-          <Link to="/">
+          <Link
+            to="/"
+            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+          >
             <HiChatAlt className="text-5xl" />
+            <span>Contact</span>
           </Link>
         </ul>
       </nav>
-      <div className="lg:hidden absolute flex h-20 justify-center top-full translate-y-full w-full p-4 rounded-lg transition duration-200 z-10">
+      <div className="lg:hidden absolute flex h-20 justify-center items-center left-0 top-full translate-y-[150%] w-full p-4 transition duration-200 z-10">
         <Link to="/" onClick={() => inContent && setInContent(false)}>
-          <HiChevronDoubleUp className="text-2xl" />
+          <HiChevronDoubleUp className="text-4xl bg-themeTwo rounded-full p-2" />
         </Link>
       </div>
     </>
