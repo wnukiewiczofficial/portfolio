@@ -1,15 +1,22 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiLocationMarker, HiMail } from "react-icons/hi";
+import { useSpring, animated } from "react-spring";
 import imgMe from "../assets/me.jpg";
 
 export default function MyCard() {
+  const popProps = useSpring({ scale: 1, from: { scale: 0 }, delay: 500 });
+
   return (
-    <div className="max-w-full w-96 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center">
-      <img
+    <animated.div
+      style={popProps}
+      className="max-w-full w-96 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center"
+    >
+      {/* <img
         src={imgMe}
         alt="Picture of me"
         className="w-3/4 rounded-full -mt-24"
-      />
+      /> */}
+      <div className="w-3/4 h-64 rounded-full -mt-24 bg-white"></div>
       <div>
         <h1 className="text-3xl font-semibold">Dawid Wnukiewicz</h1>
         <h2 className="text-xl">Web developer</h2>
@@ -43,6 +50,6 @@ export default function MyCard() {
         </div>
       </div>
       <button className="bg-themeOne p-3 rounded-xl">Download CV</button>
-    </div>
+    </animated.div>
   );
 }

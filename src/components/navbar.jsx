@@ -8,9 +8,12 @@ import {
   HiChevronDoubleUp,
 } from "react-icons/hi";
 
+import { useSpring, animated } from "react-spring";
+
 export default function NavBar({ cardRef, contentRef }) {
   const [inContent, setInContent] = useState();
   const navRef = useRef();
+  const popProps = useSpring({ scale: 1, from: { scale: 0 }, delay: 800 });
 
   useEffect(() => {
     if (inContent) {
@@ -31,8 +34,9 @@ export default function NavBar({ cardRef, contentRef }) {
   return (
     <>
       {/* mobile */}
-      <nav
+      <animated.nav
         ref={navRef}
+        style={popProps}
         className="lg:hidden absolute top-full h-20 left-1/2 -translate-x-1/2 -translate-y-[150%] w-5/6 rounded-2xl bg-themeTwo transition duration-200 z-20"
       >
         <ul className="flex w-full h-full items-center justify-around text-sm">
@@ -45,7 +49,7 @@ export default function NavBar({ cardRef, contentRef }) {
             <span>Me</span>
           </Link>
           <Link
-            to="/"
+            to="/resume"
             onClick={() => !inContent && setInContent(true)}
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
           >
@@ -53,7 +57,7 @@ export default function NavBar({ cardRef, contentRef }) {
             <span>Resume</span>
           </Link>
           <Link
-            to="/"
+            to="/projects"
             onClick={() => !inContent && setInContent(true)}
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
           >
@@ -61,7 +65,7 @@ export default function NavBar({ cardRef, contentRef }) {
             <span>Projects</span>
           </Link>
           <Link
-            to="/"
+            to="/contact"
             onClick={() => !inContent && setInContent(true)}
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
           >
@@ -69,9 +73,12 @@ export default function NavBar({ cardRef, contentRef }) {
             <span>Contact</span>
           </Link>
         </ul>
-      </nav>
+      </animated.nav>
       {/* desktop */}
-      <nav className="hidden lg:flex self-start p-12 h-20 rounded-2xl bg-themeTwo transition duration-200">
+      <animated.nav
+        style={popProps}
+        className="hidden lg:flex self-start p-12 h-20 rounded-2xl bg-themeTwo transition duration-200"
+      >
         <ul className="w-full flex gap-8 h-full items-center justify-between text-sm text-center relative">
           <Link
             to="/me"
@@ -81,33 +88,36 @@ export default function NavBar({ cardRef, contentRef }) {
             <span>Me</span>
           </Link>
           <Link
-            to="/"
+            to="/resume"
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
           >
             <HiClipboardList className="text-5xl" />
             <span>Resume</span>
           </Link>
           <Link
-            to="/"
+            to="/projects"
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
           >
             <HiCode className="text-5xl" />
             <span>Projects</span>
           </Link>
           <Link
-            to="/"
+            to="/contact"
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
           >
             <HiChatAlt className="text-5xl" />
             <span>Contact</span>
           </Link>
         </ul>
-      </nav>
-      <div className="lg:hidden absolute flex h-20 justify-center items-center left-0 top-full translate-y-[150%] w-full p-4 transition duration-200 z-10">
+      </animated.nav>
+      <animated.div
+        style={popProps}
+        className="lg:hidden absolute flex h-20 justify-center items-center left-0 top-full translate-y-[150%] w-full p-4 transition duration-200 z-10"
+      >
         <Link to="/" onClick={() => inContent && setInContent(false)}>
           <HiChevronDoubleUp className="text-4xl bg-themeTwo rounded-full p-2" />
         </Link>
-      </div>
+      </animated.div>
     </>
   );
 }

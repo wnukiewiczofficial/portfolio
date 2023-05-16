@@ -1,6 +1,6 @@
 import { useSpring, animated } from "react-spring";
 
-export default function Me({ match }) {
+export default function Resume({ match }) {
   console.log(match);
   const popProps = useSpring({ scale: 1, from: { scale: 0 }, delay: 500 });
   return (
