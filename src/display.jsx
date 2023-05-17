@@ -33,10 +33,9 @@ export default function Display() {
 
   // const location = useLocation();
   // const transitions = useTransition(location, {
-  //   from: { scale: 0 },
-  //   enter: { scale: 1 },
-  //   leave: { scale: 0, display: "none" },
-  //   config: { duration: 500 },
+  //   from: { x: "-200%" },
+  //   enter: { x: "0%" },
+  //   leave: { x: "200%" },
   // });
 
   useChain([cardPopRef, navPopRef, contentPopRef], [0, 0.6, 0.9]);
@@ -52,13 +51,13 @@ export default function Display() {
       </div>
       <header
         ref={cardRef}
-        className="lg:row-span-2 flex flex-col h-full p-6 gap-6 justify-center items-center"
+        className="lg:row-span-2 flex flex-col h-full lg:h-5/6 p-6 gap-6 justify-center lg:justify-end items-center"
       >
         <animated.div style={cardPop}>
           <MyCard />
         </animated.div>
       </header>
-      <div className="lg:w-1/2 h-screen lg:h-full p-6 pt-52 lg:pt-0 lg:flex lg:flex-col lg:gap-12 items-center lg:items-start justify-center">
+      <div className="lg:w-4/6 h-screen lg:h-5/6 p-6 pt-52 lg:pt-0 lg:flex lg:flex-col lg:gap-4 lg:items-end lg:justify-end">
         <NavBar
           cardRef={cardRef}
           contentRef={contentRef}
@@ -67,7 +66,7 @@ export default function Display() {
         <animated.section
           ref={contentRef}
           style={contentPop}
-          className="w-full h-full bg-themeTwo rounded-3xl p-6 lg:pt-6 lg:h-4/6"
+          className="w-full h-full bg-themeTwo rounded-3xl p-6 lg:pt-6 lg:h-4/6 overflow-hidden"
         >
           <Routes>
             <Route path="/" element={null} />

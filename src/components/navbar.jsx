@@ -83,7 +83,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
       {/* desktop */}
       <animated.nav
         style={navPop}
-        className="hidden lg:flex self-start p-12 h-20 rounded-2xl bg-themeTwo transition duration-200"
+        className="hidden lg:flex p-12 h-20 rounded-2xl bg-themeTwo transition duration-200"
       >
         <ul className="w-full flex gap-8 h-full items-center justify-between text-sm text-center font-semibold relative">
           <Link
