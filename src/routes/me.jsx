@@ -1,5 +1,10 @@
 import Card from "../components/card";
-import { MdDesignServices } from "react-icons/md";
+import {
+  MdDesignServices,
+  MdDesktopMac,
+  MdStorage,
+  MdBugReport,
+} from "react-icons/md";
 
 export default function Me() {
   return (
@@ -22,9 +27,9 @@ export default function Me() {
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-2 lg:p-4">
         <Card icon={<MdDesignServices />} title="UX-UI" />
-        <Card icon={<MdDesignServices />} title="UX-UI" />
-        <Card icon={<MdDesignServices />} title="UX-UI" />
-        <Card icon={<MdDesignServices />} title="UX-UI" />
+        <Card icon={<MdDesktopMac />} title="Front-end" />
+        <Card icon={<MdStorage />} title="Back-end" />
+        <Card icon={<MdBugReport />} title="Testing" />
       </div>
     </div>
   );

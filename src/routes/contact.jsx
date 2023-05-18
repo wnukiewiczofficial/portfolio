@@ -11,14 +11,14 @@ export default function Contact() {
         <ContactTab
           icon={<BsGithub />}
           label="Github"
-          value="@wnukiewiczofficial"
+          value="@ wnukiewiczofficial"
           href="https://github.com/wnukiewiczofficial"
         />
         <ContactTab
           icon={<BsLinkedin />}
           label="Linkedin"
-          value="IWEJOQIWJOE"
-          href="https://pl.linkedin.com/"
+          value="@ dawid-wnukiewicz"
+          href="https://www.linkedin.com/in/dawid-wnukiewicz-229627277/"
         />
         <ContactTab
           icon={<HiMail />}
