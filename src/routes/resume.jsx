@@ -1,11 +1,20 @@
-import { useSpring, animated } from "react-spring";
+import Card from "../components/card";
+import {
+  MdDesignServices,
+  MdDesktopMac,
+  MdStorage,
+  MdBugReport,
+} from "react-icons/md";
 
-export default function Resume({ match }) {
-  console.log(match);
-  const popProps = useSpring({ scale: 1, from: { scale: 0 }, delay: 500 });
+export default function Resume() {
   return (
-    <div className="w-full h-full">
-      <h1>Something about me</h1>
+    <div className="w-full h-full text-center lg:text-left">
+      <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">
+        Experiance
+      </h1>
+      <p className=" p-2 lg:p-4 text-sm lg:text-base">
+        Something about my experiance...
+      </p>
     </div>
   );
 }

@@ -38,7 +38,7 @@ export default function MyCard() {
             <span>Location</span>
           </div>
           <div className="flex gap-2">
-            <span className="font-semibold">Poland</span>
+            <span className="font-semibold">Poland, Poznań</span>
             <span>🇵🇱</span>
           </div>
         </div>

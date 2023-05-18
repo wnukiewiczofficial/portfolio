@@ -89,6 +89,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           <Link
             to="/me"
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => !inContent && setInContent(true)}
           >
             <HiUser className="text-5xl" />
             <span>Me</span>
@@ -96,6 +97,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           <Link
             to="/resume"
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => !inContent && setInContent(true)}
           >
             <HiClipboardList className="text-5xl" />
             <span>Resume</span>
@@ -103,6 +105,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           <Link
             to="/projects"
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => !inContent && setInContent(true)}
           >
             <HiCode className="text-5xl" />
             <span>Projects</span>
@@ -110,6 +113,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           <Link
             to="/contact"
             className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => !inContent && setInContent(true)}
           >
             <HiChatAlt className="text-5xl" />
             <span>Contact</span>

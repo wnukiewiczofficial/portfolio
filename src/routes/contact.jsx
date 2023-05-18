@@ -28,7 +28,7 @@ export default function Contact() {
         <ContactTab
           icon={<HiLocationMarker />}
           label="Location"
-          value="Poland 🇵🇱"
+          value="Poland, Poznań 🇵🇱"
         />
       </div>
     </div>
