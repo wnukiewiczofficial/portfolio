@@ -4,19 +4,18 @@ import imgMe from "../assets/me.jpg";
 
 export default function MyCard() {
   return (
-    <div className="max-w-full w-96 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center">
+    <div className="h-auto lg:w-96 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center">
       <img
         src={imgMe}
         alt="Picture of me"
-        className="w-3/4 rounded-full -mt-24"
+        className="w-4/6 rounded-full border-8 border-themeOne"
       />
-      {/* <div className="w-3/4 h-64 rounded-full -mt-24 bg-white"></div> */}
       <div>
-        <h1 className="text-3xl font-semibold">Dawid Wnukiewicz</h1>
-        <h2 className="text-xl">Web developer</h2>
+        <h1 className="text-xl lg:text-3xl font-semibold">Dawid Wnukiewicz</h1>
+        <h2 className="lg:text-xl">Web developer</h2>
       </div>
       {/* ICONS */}
-      <div className="flex gap-4 text-3xl justify-center bg-additionalOne rounded-lg p-2">
+      <div className="flex gap-4 text-2xl lg:text-3xl justify-center bg-additionalOne rounded-lg p-2">
         <a href="https://github.com/wnukiewiczofficial" target="blank">
           <BsGithub />
         </a>
@@ -28,7 +27,7 @@ export default function MyCard() {
             <HiMail className="text-2xl" />
             <span>E-mail</span>
           </div>
-          <span className="font-semibold text-sm">
+          <span className="font-semibold text-xs md:text-sm">
             wnukiewiczofficial@yahoo.com
           </span>
         </div>
@@ -37,13 +36,17 @@ export default function MyCard() {
             <HiLocationMarker className="text-2xl" />
             <span>Location</span>
           </div>
-          <div className="flex gap-2">
-            <span className="font-semibold">Poland, Poznań</span>
+          <div className="flex gap-2 items-center">
+            <span className="font-semibold text-xs md:text-sm">
+              Poland, Poznań
+            </span>
             <span>🇵🇱</span>
           </div>
         </div>
       </div>
-      <button className="bg-themeOne p-3 rounded-xl">Download CV</button>
+      <button className="bg-themeOne p-3 rounded-xl text-sm md:text-base">
+        Download CV
+      </button>
     </div>
   );
 }

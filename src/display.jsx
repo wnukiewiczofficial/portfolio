@@ -49,14 +49,13 @@ export default function Display() {
       <div className="absolute w-full h-full top-0 left-0 -z-50">
         <ParticleBg />
       </div>
-      <header
+      <animated.header
         ref={cardRef}
-        className="lg:row-span-2 flex flex-col h-full lg:h-5/6 p-6 gap-6 justify-center lg:justify-end items-center"
+        style={cardPop}
+        className="lg:row-span-2 flex flex-col h-screen lg:h-5/6 p-6 pb-32 lg:pb-6 gap-6 justify-end items-center"
       >
-        <animated.div style={cardPop}>
-          <MyCard />
-        </animated.div>
-      </header>
+        <MyCard />
+      </animated.header>
       <div className="lg:w-4/6 h-screen lg:h-5/6 p-6 pt-52 lg:pt-0 lg:flex lg:flex-col lg:gap-4 lg:items-end lg:justify-end">
         <NavBar
           cardRef={cardRef}

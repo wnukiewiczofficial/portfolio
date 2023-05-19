@@ -11,11 +11,11 @@ import {
 import { useSpring, animated } from "react-spring";
 
 export default function NavBar({ cardRef, contentRef, navPopRef }) {
-  const [inContent, setInContent] = useState();
+  const [inContent, setInContent] = useState(false);
   const navRef = useRef();
   const navMove = useSpring({
     x: "-50%",
-    y: inContent ? "150%" : "-50%",
+    y: inContent ? "150%" : "-25%",
   });
   const navPop = useSpring({
     from: { scale: 0 },
