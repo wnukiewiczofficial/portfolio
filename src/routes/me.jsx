@@ -1,4 +1,4 @@
-import Card from "../components/card";
+import MeCard from "../components/mecard";
 import {
   MdDesignServices,
   MdDesktopMac,
@@ -8,7 +8,7 @@ import {
 
 export default function Me() {
   return (
-    <div className="w-full h-full text-center lg:text-left">
+    <div className="w-full h-full text-center lg:text-left overflow-y-scroll">
       <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">About me</h1>
       <p className=" p-2 lg:p-4 text-sm lg:text-base">
         Currently, I am a student at Poznań University of Technology, pursuing a
@@ -26,10 +26,10 @@ export default function Me() {
       </h1>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-2 lg:p-4">
-        <Card icon={<MdDesignServices />} title="UX-UI" />
-        <Card icon={<MdDesktopMac />} title="Front-end" />
-        <Card icon={<MdStorage />} title="Back-end" />
-        <Card icon={<MdBugReport />} title="Testing" />
+        <MeCard icon={<MdDesignServices />} title="UX-UI" />
+        <MeCard icon={<MdDesktopMac />} title="Front-end" />
+        <MeCard icon={<MdStorage />} title="Back-end" />
+        <MeCard icon={<MdBugReport />} title="Testing" />
       </div>
     </div>
   );

@@ -41,29 +41,26 @@ export default function Display() {
   useChain([cardPopRef, navPopRef, contentPopRef], [0, 0.6, 0.9]);
 
   return (
-    <main
-      className={
-        "w-screen h-screen lg:flex lg:justify-center lg:p-8 text-white font-bai overflow-hidden relative"
-      }
-    >
-      <div className="absolute w-full h-full top-0 left-0 -z-50">
+    <main className="w-screen h-screen lg:flex lg:justify-center lg:items-center text-white font-bai overflow-hidden relative">
+      <div ref={cardRef} className="absolute w-full h-full top-0 left-0 -z-50">
         <ParticleBg />
       </div>
       <animated.header
-        ref={cardRef}
         style={cardPop}
-        className="lg:row-span-2 flex flex-col h-screen lg:h-5/6 p-6 pb-32 lg:pb-6 gap-6 justify-end items-center"
+        className="lg:row-span-2 flex flex-col h-screen lg:h-full pb-32 lg:pb-0 gap-6 justify-center items-center"
       >
         <MyCard />
       </animated.header>
-      <div className="lg:w-4/6 h-screen lg:h-5/6 p-6 pt-52 lg:pt-0 lg:flex lg:flex-col lg:gap-4 lg:items-end lg:justify-end">
+      <div
+        ref={contentRef}
+        className="lg:w-4/6 h-screen p-6 pt-52 lg:pt-0 lg:flex lg:flex-col lg:gap-4 lg:items-end lg:justify-center"
+      >
         <NavBar
           cardRef={cardRef}
           contentRef={contentRef}
           navPopRef={navPopRef}
         />
         <animated.section
-          ref={contentRef}
           style={contentPop}
           className="w-full h-full bg-themeTwo rounded-3xl p-6 lg:pt-6 lg:h-4/6 overflow-hidden"
         >

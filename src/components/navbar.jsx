@@ -25,9 +25,9 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
 
   useEffect(() => {
     if (inContent) {
-      contentRef.current.scrollIntoView({ behavior: "smooth" });
+      contentRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      cardRef.current.scrollIntoView({ behavior: "smooth" });
+      cardRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [inContent]);
 

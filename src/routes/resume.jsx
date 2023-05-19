@@ -1,4 +1,4 @@
-import Card from "../components/card";
+import Card from "../components/mecard";
 import {
   MdDesignServices,
   MdDesktopMac,

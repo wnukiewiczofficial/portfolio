@@ -4,11 +4,11 @@ import imgMe from "../assets/me.jpg";
 
 export default function MyCard() {
   return (
-    <div className="h-auto lg:w-96 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center">
+    <div className="h-auto w-full md:w-3/4 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center overflow-y-scroll">
       <img
         src={imgMe}
         alt="Picture of me"
-        className="w-4/6 rounded-full border-8 border-themeOne"
+        className="w-4/6 max-w-xl rounded-full border-8 border-themeOne"
       />
       <div>
         <h1 className="text-xl lg:text-3xl font-semibold">Dawid Wnukiewicz</h1>
