@@ -4,7 +4,7 @@ import imgMe from "../assets/me.jpg";
 
 export default function MyCard() {
   return (
-    <div className="h-auto w-full md:w-3/4 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center overflow-y-scroll">
+    <div className="h-auto w-5/6 md:w-3/4 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center overflow-y-scroll">
       <img
         src={imgMe}
         alt="Picture of me"

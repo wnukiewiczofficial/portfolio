@@ -13,15 +13,9 @@ export default function ParticleBg() {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        background: {
-          color: {
-            // value: "#000000",
-            value: "#f76c6c",
-          },
-        },
         particles: {
           color: {
-            value: "#f8e9a1",
+            value: "#000000",
           },
           collisions: {
             enable: true,
@@ -47,7 +41,7 @@ export default function ParticleBg() {
             type: "circle",
           },
           size: {
-            value: { min: 3, max: 5 },
+            value: { min: 3, max: 15 },
           },
         },
         detectRetina: true,

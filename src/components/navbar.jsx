@@ -11,11 +11,11 @@ import {
 import { useSpring, animated } from "react-spring";
 
 export default function NavBar({ cardRef, contentRef, navPopRef }) {
-  const [inContent, setInContent] = useState(false);
+  const [selected, setSelected] = useState(0);
   const navRef = useRef();
   const navMove = useSpring({
     x: "-50%",
-    y: inContent ? "150%" : "-25%",
+    y: selected > 0 ? "150%" : "-25%",
   });
   const navPop = useSpring({
     from: { scale: 0 },
@@ -24,12 +24,12 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
   });
 
   useEffect(() => {
-    if (inContent) {
+    if (selected > 0) {
       contentRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       cardRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [inContent]);
+  }, [selected]);
 
   return (
     <>
@@ -42,32 +42,40 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
         <ul className="flex w-full h-full items-center justify-around text-sm font-semibold">
           <Link
             to="/me"
-            onClick={() => !inContent && setInContent(true)}
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => selected !== 1 && setSelected(1)}
+            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+              selected === 1 && "text-themeOne bg-additionalOne"
+            }`}
           >
             <HiUser className="text-4xl" />
             <span>Me</span>
           </Link>
           <Link
             to="/resume"
-            onClick={() => !inContent && setInContent(true)}
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => selected !== 2 && setSelected(2)}
+            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+              selected === 2 && "text-themeOne bg-additionalOne"
+            }`}
           >
             <HiClipboardList className="text-4xl" />
             <span>Resume</span>
           </Link>
           <Link
             to="/projects"
-            onClick={() => !inContent && setInContent(true)}
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => selected !== 3 && setSelected(3)}
+            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+              selected === 3 && "text-themeOne bg-additionalOne"
+            }`}
           >
             <HiCode className="text-4xl" />
             <span>Projects</span>
           </Link>
           <Link
             to="/contact"
-            onClick={() => !inContent && setInContent(true)}
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
+            onClick={() => selected !== 4 && setSelected(4)}
+            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+              selected === 4 && "text-themeOne bg-additionalOne"
+            }`}
           >
             <HiChatAlt className="text-4xl" />
             <span>Contact</span>
@@ -75,7 +83,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
         </ul>
       </animated.nav>
       <div className="lg:hidden absolute flex h-20 justify-center items-center left-0 top-full translate-y-[150%] w-full p-4 transition duration-200 z-10">
-        <Link to="/" onClick={() => inContent && setInContent(false)}>
+        <Link to="/" onClick={() => selected > 0 && setSelected(0)}>
           <HiChevronDoubleUp className="text-4xl bg-themeTwo rounded-full p-2" />
         </Link>
       </div>
@@ -83,37 +91,45 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
       {/* desktop */}
       <animated.nav
         style={navPop}
-        className="hidden lg:flex p-12 h-20 rounded-2xl bg-themeTwo transition duration-200"
+        className="hidden lg:flex py-4 px-8 h-auto rounded-2xl bg-themeTwo transition duration-200"
       >
-        <ul className="w-full flex gap-8 h-full items-center justify-between text-sm text-center font-semibold relative">
+        <ul className="w-full flex gap-4 h-auto items-center justify-around text-sm text-center font-semibold relative">
           <Link
             to="/me"
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
-            onClick={() => !inContent && setInContent(true)}
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+              selected === 1 && "text-themeOne bg-additionalOne"
+            }`}
+            onClick={() => selected !== 1 && setSelected(1)}
           >
             <HiUser className="text-5xl" />
             <span>Me</span>
           </Link>
           <Link
             to="/resume"
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
-            onClick={() => !inContent && setInContent(true)}
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+              selected === 2 && "text-themeOne bg-additionalOne"
+            }`}
+            onClick={() => selected !== 2 && setSelected(2)}
           >
             <HiClipboardList className="text-5xl" />
             <span>Resume</span>
           </Link>
           <Link
             to="/projects"
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
-            onClick={() => !inContent && setInContent(true)}
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+              selected === 3 && "text-themeOne bg-additionalOne"
+            }`}
+            onClick={() => selected !== 3 && setSelected(3)}
           >
             <HiCode className="text-5xl" />
             <span>Projects</span>
           </Link>
           <Link
             to="/contact"
-            className="flex flex-col items-center gap-1 p-1 rounded-lg w-1/6"
-            onClick={() => !inContent && setInContent(true)}
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+              selected === 4 && "text-themeOne bg-additionalOne"
+            }`}
+            onClick={() => selected !== 4 && setSelected(4)}
           >
             <HiChatAlt className="text-5xl" />
             <span>Contact</span>

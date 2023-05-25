@@ -1,5 +1,6 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { HiLocationMarker, HiMail } from "react-icons/hi";
+import { SiFiverr } from "react-icons/si";
+import { HiMail } from "react-icons/hi";
 import ContactTab from "../components/contacttab";
 
 export default function Contact() {
@@ -7,12 +8,18 @@ export default function Contact() {
     <div className="w-full h-full flex flex-col gap-4 text-center lg:text-left overflow-y-scroll">
       <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">Contact</h1>
 
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 content-center">
+      <div className="flex flex-col h-full lg:grid lg:grid-cols-2 gap-4">
         <ContactTab
           icon={<BsGithub />}
           label="Github"
           value="@ wnukiewiczofficial"
           href="https://github.com/wnukiewiczofficial"
+        />
+        <ContactTab
+          icon={<SiFiverr />}
+          label="Fiverr"
+          value="@ dwnk_officially"
+          href="https://www.fiverr.com/dwnk_officially"
         />
         <ContactTab
           icon={<BsLinkedin />}
@@ -24,11 +31,6 @@ export default function Contact() {
           icon={<HiMail />}
           label="E-mail"
           value="wnukiewiczofficial@yahoo.com"
-        />
-        <ContactTab
-          icon={<HiLocationMarker />}
-          label="Location"
-          value="Poland, Poznań 🇵🇱"
         />
       </div>
     </div>

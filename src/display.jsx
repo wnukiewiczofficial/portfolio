@@ -42,7 +42,10 @@ export default function Display() {
 
   return (
     <main className="w-screen h-screen lg:flex lg:justify-center lg:items-center text-white font-bai overflow-hidden relative">
-      <div ref={cardRef} className="absolute w-full h-full top-0 left-0 -z-50">
+      <div
+        ref={cardRef}
+        className="absolute w-full h-[200%] lg:h-full top-0 left-0 -z-50 bg-gradient-to-t lg:bg-gradient-to-r from-indigo-500 via-themeOne to-indigo-500"
+      >
         <ParticleBg />
       </div>
       <animated.header
@@ -65,12 +68,36 @@ export default function Display() {
           className="w-full h-full bg-themeTwo rounded-3xl p-6 lg:pt-6 lg:h-4/6 overflow-hidden"
         >
           <Routes>
-            <Route path="/" element={null} />
+            <Route
+              path="/"
+              element={
+                <div className="w-full h-full flex flex-col gap-2 justify-center items-center">
+                  <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
+                    My name is <span className="text-themeOne">Dawid</span>!
+                  </h1>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl">
+                    Welcome to my portfolio
+                  </h2>
+                </div>
+              }
+            />
             <Route path="/me" element={<Me />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={null} />
+            <Route
+              path="*"
+              element={
+                <div className="w-full h-full flex flex-col gap-2 justify-center items-center">
+                  <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
+                    My name is <span className="text-themeOne">Dawid</span>!
+                  </h1>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl">
+                    Welcome to my portfolio
+                  </h2>
+                </div>
+              }
+            />
           </Routes>
           {/* {transitions((styles, item) => (
             <animated.div style={styles} className="w-full h-full">

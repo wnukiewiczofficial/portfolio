@@ -6,19 +6,23 @@ export default function ContactTab({ icon, label, value, href }) {
   }
   return (
     <div
-      className={`w-full bg-additionalOne p-4 rounded-lg flex flex-col justify-between items-center gap-2 relative ${
+      className={`w-full bg-additionalOne p-4 rounded-lg flex flex-col justify-center items-center gap-2 relative ${
         href && "cursor-pointer"
       }`}
       onClick={handleHref}
     >
       <div className="flex flex-col items-center gap-2">
-        <div className="text-xl md:text-3xl lg:text-4xl">{icon}</div>
-        <span>{label}</span>
+        <div className="text-5xl md:text-6xl lg:text-8xl text-themeOne">
+          {icon}
+        </div>
+        <span className="text-xl md:text-2xl lg:text-3xl">{label}</span>
       </div>
-      <span className="font-semibold text-xs md:text-sm">{value}</span>
+      <span className="font-semibold text-sm md:text-base lg:text-lg">
+        {value}
+      </span>
 
       {href && (
-        <span className="absolute top-2 right-4">
+        <span className="absolute top-4 right-4 text-2xl">
           <BiLinkExternal />
         </span>
       )}
