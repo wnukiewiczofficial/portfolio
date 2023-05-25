@@ -27,7 +27,9 @@ export default function ProjectCard({
           );
         })}
       </div>
-      <p className="p-2 text-sm lg:text-base">{description}</p>
+      <p className="p-4 text-sm md:text-base lg:text-xl bg-additionalOne rounded-lg">
+        {description}
+      </p>
     </div>
   );
 }

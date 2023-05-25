@@ -39,11 +39,11 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
         style={{ ...navPop, ...navMove }}
         className="lg:hidden absolute h-20 bottom-0 left-1/2 w-5/6 rounded-2xl bg-themeTwo z-20"
       >
-        <ul className="flex w-full h-full items-center justify-around text-sm font-semibold">
+        <ul className="flex w-full h-full items-center justify-around gap-2 p-2 text-sm font-semibold">
           <Link
             to="/me"
             onClick={() => selected !== 1 && setSelected(1)}
-            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+            className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 1 && "text-themeOne bg-additionalOne"
             }`}
           >
@@ -53,7 +53,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           <Link
             to="/resume"
             onClick={() => selected !== 2 && setSelected(2)}
-            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+            className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 2 && "text-themeOne bg-additionalOne"
             }`}
           >
@@ -63,7 +63,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           <Link
             to="/projects"
             onClick={() => selected !== 3 && setSelected(3)}
-            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+            className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 3 && "text-themeOne bg-additionalOne"
             }`}
           >
@@ -73,7 +73,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           <Link
             to="/contact"
             onClick={() => selected !== 4 && setSelected(4)}
-            className={`flex flex-col items-center gap-1 p-1 rounded-lg w-1/6 transition ${
+            className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 4 && "text-themeOne bg-additionalOne"
             }`}
           >

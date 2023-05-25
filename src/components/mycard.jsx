@@ -23,8 +23,8 @@ export default function MyCard() {
       </div>
       <div className="flex flex-col items-start w-full gap-4 bg-themeTwo rounded-lg p-2">
         <div className="w-full bg-additionalOne p-4 rounded-lg flex justify-between items-center">
-          <div className="flex gap-2">
-            <HiMail className="text-2xl" />
+          <div className="flex gap-2 items-center">
+            <HiMail className="md:text-xl lg:text-2xl" />
             <span>E-mail</span>
           </div>
           <span className="font-semibold text-xs md:text-sm">
@@ -32,8 +32,8 @@ export default function MyCard() {
           </span>
         </div>
         <div className="w-full bg-additionalOne p-4 rounded-lg flex justify-between items-center">
-          <div className="flex gap-2">
-            <HiLocationMarker className="text-2xl" />
+          <div className="flex gap-2 items-center">
+            <HiLocationMarker className="md:text-xl lg:text-2xl" />
             <span>Location</span>
           </div>
           <div className="flex gap-2 items-center">
