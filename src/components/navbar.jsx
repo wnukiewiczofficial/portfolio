@@ -10,7 +10,7 @@ import {
 
 import { useSpring, animated } from "react-spring";
 
-export default function NavBar({ cardRef, contentRef, navPopRef }) {
+export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
   const [selected, setSelected] = useState(0);
   const navRef = useRef();
   const navMove = useSpring({
@@ -41,7 +41,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
       >
         <ul className="flex w-full h-full items-center justify-around gap-2 p-2 text-sm font-semibold">
           <Link
-            to="/me"
+            to={polish ? "/pl/me" : "/me"}
             onClick={() => selected !== 1 && setSelected(1)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 1 && "text-themeOne bg-additionalOne"
@@ -51,7 +51,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
             <span>Me</span>
           </Link>
           <Link
-            to="/resume"
+            to={polish ? "/pl/resume" : "/resume"}
             onClick={() => selected !== 2 && setSelected(2)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 2 && "text-themeOne bg-additionalOne"
@@ -61,7 +61,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
             <span>Resume</span>
           </Link>
           <Link
-            to="/projects"
+            to={polish ? "/pl/projects" : "/projects"}
             onClick={() => selected !== 3 && setSelected(3)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 3 && "text-themeOne bg-additionalOne"
@@ -71,7 +71,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
             <span>Projects</span>
           </Link>
           <Link
-            to="/contact"
+            to={polish ? "/pl/contact" : "/contact"}
             onClick={() => selected !== 4 && setSelected(4)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 4 && "text-themeOne bg-additionalOne"
@@ -83,7 +83,10 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
         </ul>
       </animated.nav>
       <div className="lg:hidden absolute flex h-20 justify-center items-center left-0 top-full translate-y-[150%] w-full p-4 transition duration-200 z-10">
-        <Link to="/" onClick={() => selected > 0 && setSelected(0)}>
+        <Link
+          to={polish ? "/pl" : "/"}
+          onClick={() => selected > 0 && setSelected(0)}
+        >
           <HiChevronDoubleUp className="text-4xl bg-themeTwo rounded-full p-2" />
         </Link>
       </div>
@@ -95,7 +98,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
       >
         <ul className="w-full flex gap-4 h-auto items-center justify-around text-sm text-center font-semibold relative">
           <Link
-            to="/me"
+            to={polish ? "/pl/me" : "/me"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 1 && "text-themeOne bg-additionalOne"
             }`}
@@ -105,7 +108,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
             <span>Me</span>
           </Link>
           <Link
-            to="/resume"
+            to={polish ? "/pl/resume" : "/resume"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 2 && "text-themeOne bg-additionalOne"
             }`}
@@ -115,7 +118,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
             <span>Resume</span>
           </Link>
           <Link
-            to="/projects"
+            to={polish ? "/pl/projects" : "/projects"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 3 && "text-themeOne bg-additionalOne"
             }`}
@@ -125,7 +128,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
             <span>Projects</span>
           </Link>
           <Link
-            to="/contact"
+            to={polish ? "/pl/contact" : "/contact"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 4 && "text-themeOne bg-additionalOne"
             }`}

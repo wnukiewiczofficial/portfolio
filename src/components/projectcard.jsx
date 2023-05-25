@@ -1,20 +1,45 @@
+import { BsGithub } from "react-icons/bs";
+import { BiLinkExternal } from "react-icons/bi";
+
 export default function ProjectCard({
   title,
   description,
   tags,
+  github,
+  href,
   priv,
   finished = true,
   images = [],
 }) {
   return (
     <div className={`${!finished && "opacity-50"} flex flex-col gap-4`}>
-      <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">
-        {title}{" "}
-        {priv && <span className="text-base text-white">(private)</span>}
-        {!finished && (
-          <span className="text-base text-white">(not finished)</span>
+      <div className="flex gap-2 items-end">
+        <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">
+          {title}{" "}
+          {priv && <span className="text-base text-white">(private)</span>}
+          {!finished && (
+            <span className="text-base text-white">(not finished)</span>
+          )}
+        </h1>
+        {github && (
+          <a
+            href={github}
+            className="text-2xl md:text-3xl lg:text-4xl self-center"
+            target="blank"
+          >
+            <BsGithub />
+          </a>
         )}
-      </h1>
+        {href && (
+          <a
+            href={href}
+            className="text-2xl md:text-3xl lg:text-4xl self-center"
+            target="blank"
+          >
+            <BiLinkExternal />
+          </a>
+        )}
+      </div>
       <div className="flex flex-col lg:flex-row gap-2">
         {images.map((img, i) => {
           return (

@@ -1,20 +1,20 @@
-import ProjectCard from "../components/projectcard";
+import ProjectCard from "../../components/projectcard";
 
-import PortfolioImage1 from "../assets/portfolio1.png";
-import PortfolioImage2 from "../assets/portfolio2.png";
-import ctxPlaygroundImage1 from "../assets/ctx.Playground1.png";
-import ctxPlaygroundImage2 from "../assets/ctx.Playground2.png";
-import ChardoRobImage1 from "../assets/chardorob1.png";
-import ChardoRobImage2 from "../assets/chardorob2.png";
-import ChatEmImage1 from "../assets/chatem1.png";
-import ChatEmImage2 from "../assets/chatem2.png";
-import PocketyImage1 from "../assets/pockety1.png";
-import HaxballImage1 from "../assets/haxball1.png";
-import HaxballImage2 from "../assets/haxball2.png";
-import WeatherAppImage1 from "../assets/weatherapp1.png";
-import WeatherAppImage2 from "../assets/weatherapp2.png";
+import PortfolioImage1 from "../../assets/portfolio1.png";
+import PortfolioImage2 from "../../assets/portfolio2.png";
+import ctxPlaygroundImage1 from "../../assets/ctx.Playground1.png";
+import ctxPlaygroundImage2 from "../../assets/ctx.Playground2.png";
+import ChardoRobImage1 from "../../assets/chardorob1.png";
+import ChardoRobImage2 from "../../assets/chardorob2.png";
+import ChatEmImage1 from "../../assets/chatem1.png";
+import ChatEmImage2 from "../../assets/chatem2.png";
+import PocketyImage1 from "../../assets/pockety1.png";
+import HaxballImage1 from "../../assets/haxball1.png";
+import HaxballImage2 from "../../assets/haxball2.png";
+import WeatherAppImage1 from "../../assets/weatherapp1.png";
+import WeatherAppImage2 from "../../assets/weatherapp2.png";
 
-export default function Projects() {
+export default function ProjectsPL() {
   return (
     <div className="w-full h-full text-center lg:text-left flex flex-col gap-6 overflow-y-auto">
       <ProjectCard
