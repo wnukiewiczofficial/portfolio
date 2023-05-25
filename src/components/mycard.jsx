@@ -1,5 +1,6 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiLocationMarker, HiMail } from "react-icons/hi";
+import { TbBrandFiverr } from "react-icons/tb";
 import imgMe from "../assets/me.jpg";
 
 export default function MyCard() {
@@ -16,10 +17,27 @@ export default function MyCard() {
       </div>
       {/* ICONS */}
       <div className="flex gap-4 text-2xl lg:text-3xl justify-center bg-additionalOne rounded-lg p-2">
-        <a href="https://github.com/wnukiewiczofficial" target="blank">
+        <a
+          href="https://github.com/wnukiewiczofficial"
+          target="blank"
+          className="hover:-translate-y-1 transition active:scale-75"
+        >
           <BsGithub />
         </a>
-        <BsLinkedin />
+        <a
+          href="https://www.linkedin.com/in/dawid-wnukiewicz-229627277"
+          target="blank"
+          className="hover:-translate-y-1 transition active:scale-75"
+        >
+          <BsLinkedin />
+        </a>
+        <a
+          href="https://www.fiverr.com/dwnk_officially"
+          target="blank"
+          className="hover:-translate-y-1 transition active:scale-75"
+        >
+          <TbBrandFiverr />
+        </a>
       </div>
       <div className="flex flex-col items-start w-full gap-4 bg-themeTwo rounded-lg p-2">
         <div className="w-full bg-additionalOne p-4 rounded-lg flex justify-between items-center">
@@ -44,9 +62,14 @@ export default function MyCard() {
           </div>
         </div>
       </div>
-      <button className="bg-themeOne p-3 rounded-xl text-sm md:text-base">
-        Download CV
-      </button>
+      <div className="flex gap-2 lg:text-lg">
+        <button className="bg-themeOne p-3 rounded-xl hover:opacity-80 active:opacity-60 transition">
+          Download CV 🇵🇱
+        </button>
+        <button className="bg-themeOne p-3 rounded-xl hover:opacity-80 active:opacity-60 transition">
+          Download CV 🇬🇧
+        </button>
+      </div>
     </div>
   );
 }

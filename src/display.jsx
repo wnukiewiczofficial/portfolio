@@ -8,14 +8,7 @@ import Contact from "./routes/contact";
 
 import { Routes, Route } from "react-router";
 import ParticleBg from "./components/particles";
-import {
-  useSpring,
-  useSpringRef,
-  animated,
-  useTransition,
-  useChain,
-} from "react-spring";
-import { useLocation } from "react-router";
+import { useSpring, useSpringRef, animated, useChain } from "react-spring";
 
 export default function Display() {
   const cardRef = useRef();
@@ -30,13 +23,6 @@ export default function Display() {
     from: { scale: 0 },
     ref: contentPopRef,
   });
-
-  // const location = useLocation();
-  // const transitions = useTransition(location, {
-  //   from: { x: "-200%" },
-  //   enter: { x: "0%" },
-  //   leave: { x: "200%" },
-  // });
 
   useChain([cardPopRef, navPopRef, contentPopRef], [0, 0.6, 0.9]);
 
@@ -99,11 +85,6 @@ export default function Display() {
               }
             />
           </Routes>
-          {/* {transitions((styles, item) => (
-            <animated.div style={styles} className="w-full h-full">
-              
-            </animated.div>
-          ))} */}
         </animated.section>
       </div>
     </main>

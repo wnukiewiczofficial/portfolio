@@ -15,7 +15,7 @@ export default function ParticleBg() {
       options={{
         particles: {
           color: {
-            value: "#000000",
+            value: ["#000000", "#FFF"],
           },
           collisions: {
             enable: true,

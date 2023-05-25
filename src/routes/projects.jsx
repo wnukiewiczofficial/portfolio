@@ -1,6 +1,7 @@
 import ProjectCard from "../components/projectcard";
 
-import PortfolioImage from "../assets/portfolio.png";
+import PortfolioImage1 from "../assets/portfolio1.png";
+import PortfolioImage2 from "../assets/portfolio2.png";
 import ctxPlaygroundImage1 from "../assets/ctx.Playground1.png";
 import ctxPlaygroundImage2 from "../assets/ctx.Playground2.png";
 import ChardoRobImage1 from "../assets/chardorob1.png";
@@ -26,7 +27,7 @@ export default function Projects() {
       <ProjectCard
         title="Portfolio website"
         description="You are currently on this website. The Portfolio website is for anyone who wants to know me better as a developer. CV? Projects? Contact? Everything will be found here."
-        images={[PortfolioImage]}
+        images={[PortfolioImage1, PortfolioImage2]}
       />
       <ProjectCard
         priv
@@ -35,7 +36,7 @@ export default function Projects() {
         images={[ChardoRobImage1, ChardoRobImage2]}
       />
       <ProjectCard
-        title="70+ web games and programs"
+        title="100+ web games and programs"
         description="In the past, I have developed numerous web games and programs using JavaScript. However, I have also worked on various projects using different tools and languages, including C++ with SDL2 and C# with Unity. While JavaScript has been my primary focus, I have ventured into these other technologies for specific projects. Some of the most significant ones have been showcased in the ctx.Playground. However, due to the inefficiency and complexity of collecting them all, many projects have been excluded. It is worth noting that a majority of these projects were completed as part of my freelancing orders for clients."
       />
       <ProjectCard

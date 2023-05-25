@@ -96,7 +96,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
         <ul className="w-full flex gap-4 h-auto items-center justify-around text-sm text-center font-semibold relative">
           <Link
             to="/me"
-            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 1 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 1 && setSelected(1)}
@@ -106,7 +106,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           </Link>
           <Link
             to="/resume"
-            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 2 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 2 && setSelected(2)}
@@ -116,7 +116,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           </Link>
           <Link
             to="/projects"
-            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 3 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 3 && setSelected(3)}
@@ -126,7 +126,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef }) {
           </Link>
           <Link
             to="/contact"
-            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
+            className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 4 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 4 && setSelected(4)}
