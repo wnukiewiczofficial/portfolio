@@ -48,7 +48,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             }`}
           >
             <HiUser className="text-4xl" />
-            <span>Me</span>
+            <span>{polish ? "Ja" : "Me"}</span>
           </Link>
           <Link
             to={polish ? "/pl/resume" : "/resume"}
@@ -58,7 +58,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             }`}
           >
             <HiClipboardList className="text-4xl" />
-            <span>Resume</span>
+            <span>{polish ? "Życiorys" : "Resume"}</span>
           </Link>
           <Link
             to={polish ? "/pl/projects" : "/projects"}
@@ -68,7 +68,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             }`}
           >
             <HiCode className="text-4xl" />
-            <span>Projects</span>
+            <span>{polish ? "Projekty" : "Projects"}</span>
           </Link>
           <Link
             to={polish ? "/pl/contact" : "/contact"}
@@ -78,7 +78,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             }`}
           >
             <HiChatAlt className="text-4xl" />
-            <span>Contact</span>
+            <span>{polish ? "Kontakt" : "Contact"}</span>
           </Link>
         </ul>
       </animated.nav>
@@ -105,7 +105,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             onClick={() => selected !== 1 && setSelected(1)}
           >
             <HiUser className="text-5xl" />
-            <span>Me</span>
+            <span>{polish ? "Ja" : "Me"}</span>
           </Link>
           <Link
             to={polish ? "/pl/resume" : "/resume"}
@@ -115,7 +115,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             onClick={() => selected !== 2 && setSelected(2)}
           >
             <HiClipboardList className="text-5xl" />
-            <span>Resume</span>
+            <span>{polish ? "Życiorys" : "Resume"}</span>
           </Link>
           <Link
             to={polish ? "/pl/projects" : "/projects"}
@@ -125,7 +125,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             onClick={() => selected !== 3 && setSelected(3)}
           >
             <HiCode className="text-5xl" />
-            <span>Projects</span>
+            <span>{polish ? "Projekty" : "Projects"}</span>
           </Link>
           <Link
             to={polish ? "/pl/contact" : "/contact"}
@@ -135,7 +135,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
             onClick={() => selected !== 4 && setSelected(4)}
           >
             <HiChatAlt className="text-5xl" />
-            <span>Contact</span>
+            <span>{polish ? "Kontakt" : "Contact"}</span>
           </Link>
         </ul>
       </animated.nav>

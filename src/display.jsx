@@ -56,7 +56,7 @@ export default function Display() {
         style={cardPop}
         className="lg:row-span-2 flex flex-col h-screen lg:h-full pb-32 lg:pb-0 gap-6 justify-center items-center"
       >
-        <MyCard />
+        <MyCard polish={polish} setPolish={setPolish} />
       </animated.header>
       <div
         ref={contentRef}
@@ -78,7 +78,7 @@ export default function Display() {
                 index
                 element={
                   <div className="w-full h-full flex flex-col gap-2 justify-center items-center">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center">
                       My name is <span className="text-themeOne">Dawid</span>!
                     </h1>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl">
@@ -98,7 +98,7 @@ export default function Display() {
                 index
                 element={
                   <div className="w-full h-full flex flex-col gap-2 justify-center items-center">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center">
                       Mam na imię <span className="text-themeOne">Dawid</span>!
                     </h1>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl">

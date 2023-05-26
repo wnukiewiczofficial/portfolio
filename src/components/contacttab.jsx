@@ -2,7 +2,7 @@ import { BiLinkExternal } from "react-icons/bi";
 
 export default function ContactTab({ icon, label, value, href }) {
   function handleHref() {
-    if (href) window.location.replace("https://github.com/wnukiewiczofficial");
+    if (href) window.open(href);
   }
   return (
     <div

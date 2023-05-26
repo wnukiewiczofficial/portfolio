@@ -6,7 +6,7 @@ import ContactTab from "../../components/contacttab";
 export default function ContactPL() {
   return (
     <div className="w-full h-full flex flex-col gap-4 text-center lg:text-left overflow-y-scroll">
-      <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">Contact</h1>
+      <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">Kontakt</h1>
 
       <div className="flex flex-col h-full lg:grid lg:grid-cols-2 gap-4">
         <ContactTab

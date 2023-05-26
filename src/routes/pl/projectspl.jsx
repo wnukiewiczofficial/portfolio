@@ -14,12 +14,12 @@ import HaxballImage2 from "../../assets/haxball2.png";
 import WeatherAppImage1 from "../../assets/weatherapp1.png";
 import WeatherAppImage2 from "../../assets/weatherapp2.png";
 
-export default function ProjectsPL() {
+export default function Projects() {
   return (
     <div className="w-full h-full text-center lg:text-left flex flex-col gap-6 overflow-y-auto">
       <ProjectCard
         title="ctx.Playground"
-        description="ctx.Playground is a website with original games and programs. You will find there all the games and programs I have personally created. Every entry is playable, with some being individually hosted. There are programs I have carefully selected for inclusion, despite having created even more than what is currently featured."
+        description="ctx.Playground to strona z oryginalnymi grami i programami. Znajdziesz tam wszystkie gry i programy, które osobiście stworzyłem. Każdy wpis jest grywalny, a niektóre są indywidualnie hostowane. Istnieją programy, które starannie wybrałem do włączenia, mimo że stworzyłem nawet więcej niż to, co jest obecnie prezentowane."
         images={[ctxPlaygroundImage1, ctxPlaygroundImage2]}
         github="https://github.com/wnukiewiczofficial/ctx.Playground"
         href="https://wnukiewiczofficial.github.io/ctx.Playground/"
@@ -27,40 +27,40 @@ export default function ProjectsPL() {
       <ProjectCard
         priv
         title="Pockety"
-        description="Pockety is a web app designed for managing personal task lists. It boasts an advanced backend with numerous impressive features. Users can create, delete, and preview todos, as well as sort them by various criteria. The app also offers a trash feature for restoring accidentally removed items. Additionally, users can modify properties such as color, deadline, description, and priority of their todos. Pockety provides services to registered users and utilizes email-based authentication for important actions. Notably, it even offers a demo version that does not rely on a backend or store real data. However, due to security concerns, the app is currently unpublished and remains a work in progress."
+        description="Pockety to aplikacja internetowa przeznaczona do zarządzania osobistymi listami zadań. Posiada zaawansowany backend z wieloma imponującymi funkcjami. Użytkownicy mogą tworzyć, usuwać i przeglądać listy zadań, a także sortować je według różnych kryteriów. Aplikacja oferuje również funkcję kosza do przywracania przypadkowo usuniętych elementów. Ponadto użytkownicy mogą modyfikować właściwości, takie jak kolor, termin, opis i priorytet swoich zadań. Pockety świadczy usługi zarejestrowanym użytkownikom i wykorzystuje uwierzytelnianie oparte na poczcie e-mail do ważnych działań. Co ważne, oferuje nawet wersję demonstracyjną, która nie opiera się na zapleczu ani nie przechowuje prawdziwych danych. Jednak ze względu na obawy związane z bezpieczeństwem aplikacja nie jest obecnie publikowana i pozostaje w toku."
         images={[PocketyImage1]}
       />
       <ProjectCard
         title="Portfolio website"
-        description="You are currently on this website. The Portfolio website is for anyone who wants to know me better as a developer. CV? Projects? Contact? Everything will be found here."
+        description="Znajdujesz się obecnie na tej stronie. Strona Portfolio jest dla każdego, kto chce mnie lepiej poznać jako dewelopera. CV? Projekty? Kontakt? Wszystko znajdziesz tutaj."
         images={[PortfolioImage1, PortfolioImage2]}
       />
       <ProjectCard
         priv
         title="ChardoRob"
-        description="ChardoRob is a website dedicated to homemade wines. The individual behind these wines wanted to showcase and describe each of them on the internet. One noteworthy feature is that every wine bottle is assigned a unique QR ID. When someone scans the QR code, it directly navigates them to the corresponding wine section on the ChardoRob website."
+        description="ChardoRob to strona poświęcona winom domowej roboty. Osoba stojąca za tymi winami chciała zaprezentować i opisać każde z nich w Internecie. Jedną z godnych uwagi funkcji jest to, że każda butelka wina ma przypisany unikalny identyfikator QR. Gdy ktoś zeskanuje kod QR, zostanie bezpośrednio przekierowany do odpowiedniej sekcji wina na stronie internetowej ChardoRob."
         images={[ChardoRobImage1, ChardoRobImage2]}
       />
       <ProjectCard
         title="100+ web games and programs"
-        description="In the past, I have developed numerous web games and programs using JavaScript. However, I have also worked on various projects using different tools and languages, including C++ with SDL2 and C# with Unity. While JavaScript has been my primary focus, I have ventured into these other technologies for specific projects. Some of the most significant ones have been showcased in the ctx.Playground. However, due to the inefficiency and complexity of collecting them all, many projects have been excluded. It is worth noting that a majority of these projects were completed as part of my freelancing orders for clients."
+        description="W przeszłości stworzyłem wiele gier internetowych i programów wykorzystujących JavaScript. Pracowałem jednak również nad różnymi projektami przy użyciu różnych narzędzi i języków, w tym C++ z SDL2 i C# z Unity. Podczas gdy JavaScript był moim głównym celem, zapuściłem się w te inne technologie dla konkretnych projektów. Niektóre z najbardziej znaczących zostały zaprezentowane w ctx.Playground. Jednak ze względu na nieefektywność i złożoność zebrania ich wszystkich, wiele projektów zostało wykluczonych. Warto zauważyć, że większość z tych projektów została zrealizowana w ramach moich zleceń freelancerskich dla klientów."
       />
       <ProjectCard
         title="Haxball Game Room"
-        description="A script that manages a haxball's game room. I once played this game so I found a way to create my own advanced custom server with cool features. Commands, player statistics, afk system. The script needs to be run on the Headless Haxball service."
+        description="Skrypt zarządzający pokojem w Haxball. Kiedyś grałem w tę grę, więc znalazłem sposób na stworzenie własnego zaawansowanego niestandardowego serwera z fajnymi funkcjami. Komendy, statystyki graczy, system afk. Skrypt musi być uruchomiony na usłudze Headless Haxball."
         images={[HaxballImage1, HaxballImage2]}
         github="https://github.com/wnukiewiczofficial/haxballserver"
       />
       <ProjectCard
         title="Weather App"
-        description="This weather application provides real-time updates for the current weather conditions in a specific location. While the design is currently in its raw state, the primary focus is on ensuring accurate and up-to-date weather forecasts."
+        description="Ta aplikacja pogodowa zapewnia aktualizacje w czasie rzeczywistym dla bieżących warunków pogodowych w określonej lokalizacji. Chociaż projekt jest obecnie w stanie surowym, głównym celem jest zapewnienie dokładnych i aktualnych prognoz pogody."
         images={[WeatherAppImage1, WeatherAppImage2]}
         github="https://github.com/wnukiewiczofficial/weatherapp"
       />
       <ProjectCard
         finished={false}
         title="ChatEm"
-        description="ChatEm is a web app designed for real-time chatting with other users. It features a simple and basic design, and the app utilizes websockets for communication. The development of the app is currently a work in progress, and it is not yet fully completed. However, the chat functionality is fully functional and operational."
+        description="ChatEm to aplikacja internetowa przeznaczona do czatowania w czasie rzeczywistym z innymi użytkownikami. Charakteryzuje się prostym i podstawowym wyglądem, a aplikacja wykorzystuje websockets do komunikacji. Rozwój aplikacji jest obecnie w toku i nie jest jeszcze w pełni ukończony. Funkcja czatu jest jednak w pełni funkcjonalna i działa."
         images={[ChatEmImage1, ChatEmImage2]}
       />
     </div>

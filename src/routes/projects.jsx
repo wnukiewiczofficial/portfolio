@@ -14,7 +14,7 @@ import HaxballImage2 from "../assets/haxball2.png";
 import WeatherAppImage1 from "../assets/weatherapp1.png";
 import WeatherAppImage2 from "../assets/weatherapp2.png";
 
-export default function Projects() {
+export default function ProjectsPL() {
   return (
     <div className="w-full h-full text-center lg:text-left flex flex-col gap-6 overflow-y-auto">
       <ProjectCard
