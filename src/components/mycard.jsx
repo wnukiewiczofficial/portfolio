@@ -3,6 +3,8 @@ import { HiLocationMarker, HiMail } from "react-icons/hi";
 import { TbBrandFiverr } from "react-icons/tb";
 import imgMe from "../assets/me.jpg";
 import { Link, useLocation } from "react-router-dom";
+import CVpl from "../assets/cv/CVpl.pdf";
+import CVen from "../assets/cv/CVen.pdf";
 
 export default function MyCard({ polish }) {
   const location = useLocation();
@@ -71,12 +73,20 @@ export default function MyCard({ polish }) {
         </div>
       </div>
       <div className="flex gap-2 lg:text-lg">
-        <button className="bg-themeOne p-3 w-full rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition">
+        <a
+          href={CVpl}
+          download="CV Dawid Wnukiewicz PL"
+          className="bg-themeOne p-3 w-full rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition"
+        >
           {polish ? "Pobierz CV 🇵🇱" : "Download CV 🇵🇱"}
-        </button>
-        <button className="bg-themeOne p-3 w-full rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition">
+        </a>
+        <a
+          href={CVen}
+          download="CV Dawid Wnukiewicz ENG"
+          className="bg-themeOne p-3 w-full rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition"
+        >
           {polish ? "Pobierz CV 🇬🇧" : "Download CV 🇬🇧"}
-        </button>
+        </a>
       </div>
     </div>
   );
