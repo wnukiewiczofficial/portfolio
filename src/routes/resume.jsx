@@ -1,6 +1,6 @@
 export default function Resume() {
   return (
-    <div className="w-full h-full text-center lg:text-left overflow-y-scroll">
+    <div className="w-full h-full text-center lg:text-left overflow-y-scroll scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
       <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">
         Experience
       </h1>

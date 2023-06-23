@@ -9,7 +9,7 @@ import CVen from "../assets/cv/CVen.pdf";
 export default function MyCard({ polish }) {
   const location = useLocation();
   return (
-    <div className="h-auto w-5/6 md:w-3/4 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center overflow-y-scroll">
+    <div className="h-auto w-5/6 md:w-3/4 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center overflow-y-scroll scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
       <img
         src={imgMe}
         alt="Picture of me"
@@ -19,7 +19,7 @@ export default function MyCard({ polish }) {
         to={polish ? location.pathname.substring(3) : `/pl${location.pathname}`}
         className="bg-themeOne p-2 rounded-2xl font-semibold hover:opacity-80 active:opacity-60 active:scale-90 transition"
       >
-        {polish ? "Zmień na angielski 🇬🇧" : "Change to polish 🇵🇱"}
+        {polish ? "Zmień na angielski" : "Change to polish"}
       </Link>
       <div>
         <h1 className="text-xl lg:text-3xl font-semibold">Dawid Wnukiewicz</h1>
@@ -72,20 +72,20 @@ export default function MyCard({ polish }) {
           </div>
         </div>
       </div>
-      <div className="flex gap-2 lg:text-lg">
+      <div className="flex gap-2 lg:text-lg font-semibold w-full p-2">
         <a
           href={CVpl}
           download="CV Dawid Wnukiewicz PL"
           className="bg-themeOne p-3 w-full rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition"
         >
-          {polish ? "Pobierz CV 🇵🇱" : "Download CV 🇵🇱"}
+          {polish ? "CV (Polski)" : "CV (Polish)"}
         </a>
         <a
           href={CVen}
           download="CV Dawid Wnukiewicz ENG"
           className="bg-themeOne p-3 w-full rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition"
         >
-          {polish ? "Pobierz CV 🇬🇧" : "Download CV 🇬🇧"}
+          {polish ? "CV (Angielski)" : "CV (English)"}
         </a>
       </div>
     </div>

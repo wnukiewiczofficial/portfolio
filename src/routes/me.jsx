@@ -8,7 +8,7 @@ import {
 
 export default function Me() {
   return (
-    <div className="w-full h-full text-center lg:text-left overflow-y-scroll">
+    <div className="w-full h-full text-center lg:text-left overflow-y-scroll scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
       <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">About me</h1>
       <p className="m-2 lg:m-4 p-2 lg:p-4 text-sm md:text-base lg:text-xl bg-additionalOne rounded-lg">
         Currently, I am a student at Poznań University of Technology, pursuing a

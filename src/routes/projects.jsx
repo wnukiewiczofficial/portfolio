@@ -14,9 +14,9 @@ import HaxballImage2 from "../assets/haxball2.png";
 import WeatherAppImage1 from "../assets/weatherapp1.png";
 import WeatherAppImage2 from "../assets/weatherapp2.png";
 
-export default function ProjectsPL() {
+export default function Projects() {
   return (
-    <div className="w-full h-full text-center lg:text-left flex flex-col gap-6 overflow-y-auto">
+    <div className="w-full h-full text-center lg:text-left flex flex-col gap-6 overflow-y-auto overflow-x-hidden scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
       <ProjectCard
         title="ctx.Playground"
         description="ctx.Playground is a website with original games and programs. You will find there all the games and programs I have personally created. Every entry is playable, with some being individually hosted. There are programs I have carefully selected for inclusion, despite having created even more than what is currently featured."
