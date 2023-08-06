@@ -9,18 +9,18 @@ import CVen from "../assets/cv/CVen.pdf";
 export default function MyCard({ polish }) {
   const location = useLocation();
   return (
-    <div className="h-auto w-5/6 md:w-3/4 flex flex-col gap-4 bg-themeTwo p-4 rounded-3xl text-center place-items-center overflow-y-scroll scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
-      <img
+    <div className="h-auto lg:h-full w-full md:w-full flex flex-col gap-4 bg-themeTwo px-4 py-8 rounded-3xl text-center place-items-center justify-center overflow-y-scroll scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
+      {/* <img
         src={imgMe}
         alt="Picture of me"
         className="w-4/6 max-w-xl rounded-full border-8 border-themeOne"
-      />
-      <Link
+      /> */}
+      {/* <Link
         to={polish ? location.pathname.substring(3) : `/pl${location.pathname}`}
         className="bg-themeOne p-2 rounded-2xl font-semibold hover:opacity-80 active:opacity-60 active:scale-90 transition"
       >
         {polish ? "Zmień na angielski" : "Change to polish"}
-      </Link>
+      </Link> */}
       <div>
         <h1 className="text-xl lg:text-3xl font-semibold">Dawid Wnukiewicz</h1>
         <h2 className="lg:text-xl">Web developer</h2>

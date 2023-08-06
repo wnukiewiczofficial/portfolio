@@ -45,7 +45,7 @@ export default function Display() {
   useChain([cardPopRef, navPopRef, contentPopRef], [0, 0.6, 0.9]);
 
   return (
-    <main className="w-screen h-screen lg:flex lg:justify-center lg:items-center text-white font-bai overflow-hidden relative">
+    <main className="w-screen h-screen z-10 bg-additionalOne lg:flex lg:justify-around lg:items-center lg:gap-12 px-12 lg:p-12 text-white font-bai overflow-hidden relative">
       <div
         ref={cardRef}
         className="absolute w-full h-[200%] lg:h-full top-0 left-0 -z-50 bg-gradient-to-t lg:bg-gradient-to-r from-indigo-500 via-themeOne to-indigo-500"
@@ -54,13 +54,13 @@ export default function Display() {
       </div>
       <animated.header
         style={cardPop}
-        className="lg:row-span-2 flex flex-col h-screen lg:h-full pb-32 lg:pb-0 gap-6 justify-center items-center"
+        className="flex flex-col w-full lg:w-1/2 h-screen lg:h-full pb-32 lg:pb-0 gap-6 justify-center items-center"
       >
         <MyCard polish={polish} setPolish={setPolish} />
       </animated.header>
       <div
         ref={contentRef}
-        className="lg:w-4/6 h-screen p-6 pt-52 lg:pt-0 lg:flex lg:flex-col lg:gap-4 lg:items-end lg:justify-center"
+        className="w-full bg-red h-screen p-6 pt-52 lg:pt-0 lg:p-0 lg:flex lg:flex-col lg:gap-4 lg:items-end lg:justify-center"
       >
         <NavBar
           cardRef={cardRef}

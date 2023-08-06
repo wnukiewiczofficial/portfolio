@@ -8,7 +8,7 @@ import {
 
 export default function MePL() {
   return (
-    <div className="w-full h-full text-center lg:text-left overflow-y-scroll scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
+    <div className="w-full h-full text-center lg:text-left overflow-y-auto overflow-x-hidden scrollbar scrollbar-track-white/0 scrollbar-thumb-accent">
       <h1 className="text-2xl lg:text-5xl font-bold text-themeOne">O mnie</h1>
       <p className="m-2 lg:m-4 p-2 lg:p-4 text-sm md:text-base lg:text-xl bg-additionalOne rounded-lg">
         Jestem obecnie studentem drugiego semestru na Politechnice Poznańskiej,
