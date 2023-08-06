@@ -22,15 +22,15 @@ export default function Display() {
 
   const navigate = useNavigate();
 
-  const [polish, setPolish] = useState();
+  const [english, setEnglish] = useState();
   const location = useLocation();
   useEffect(() => {
-    const isPolish =
-      location.pathname.split("/").filter((item) => item !== "")[0] === "pl";
-    setPolish(isPolish);
+    const isEnglish =
+      location.pathname.split("/").filter((item) => item !== "")[0] === "en";
+    setEnglish(isEnglish);
   }, [location]);
 
-  useEffect(() => (polish ? navigate("/pl") : navigate("/")), []);
+  useEffect(() => (english ? navigate("/en") : navigate("/")), []);
 
   const cardPopRef = useSpringRef();
   const navPopRef = useSpringRef();
@@ -45,7 +45,7 @@ export default function Display() {
   useChain([cardPopRef, navPopRef, contentPopRef], [0, 0.6, 0.9]);
 
   return (
-    <main className="w-screen h-screen z-10 bg-additionalOne lg:flex lg:justify-around lg:items-center lg:gap-12 px-12 lg:p-12 text-white font-bai overflow-hidden relative">
+    <main className="w-screen h-screen z-10 bg-additionalOne lg:flex lg:justify-around lg:items-center lg:gap-12 px-6 lg:p-12 text-white font-bai overflow-hidden relative">
       <div
         ref={cardRef}
         className="absolute w-full h-[200%] lg:h-full top-0 left-0 -z-50 bg-gradient-to-t lg:bg-gradient-to-r from-indigo-500 via-themeOne to-indigo-500"
@@ -56,44 +56,24 @@ export default function Display() {
         style={cardPop}
         className="flex flex-col w-full lg:w-1/2 h-screen lg:h-full pb-32 lg:pb-0 gap-6 justify-center items-center"
       >
-        <MyCard polish={polish} setPolish={setPolish} />
+        <MyCard english={english} setEnglish={setEnglish} />
       </animated.header>
       <div
         ref={contentRef}
-        className="w-full bg-red h-screen p-6 pt-52 lg:pt-0 lg:p-0 lg:flex lg:flex-col lg:gap-4 lg:items-end lg:justify-center"
+        className="w-full h-full lg:p-6 pt-52 pb-6 lg:pb-0 lg:pt-0 flex flex-col lg:gap-4 lg:items-end lg:justify-center"
       >
         <NavBar
           cardRef={cardRef}
           contentRef={contentRef}
           navPopRef={navPopRef}
-          polish={polish}
+          english={english}
         />
         <animated.section
           style={contentPop}
-          className="w-full h-full bg-themeTwo rounded-3xl p-6 lg:pt-6 lg:h-4/6 overflow-hidden"
+          className="w-full h-full bg-themeTwo shadow-lg shadow-themeTwo rounded-3xl p-6 lg:pt-6 lg:h-4/6 overflow-hidden"
         >
           <Routes>
             <Route path="/">
-              <Route
-                index
-                element={
-                  <div className="w-full h-full flex flex-col gap-2 justify-center items-center">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center">
-                      My name is <span className="text-themeOne">Dawid</span>!
-                    </h1>
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl">
-                      Welcome to my portfolio
-                    </h2>
-                  </div>
-                }
-              />
-              <Route path="me" element={<Me />} />
-              <Route path="resume" element={<Resume />} />
-              <Route path="projects" element={<Projects />} />
-              <Route path="contact" element={<Contact />} />
-            </Route>
-
-            <Route path="/pl">
               <Route
                 index
                 element={
@@ -111,6 +91,25 @@ export default function Display() {
               <Route path="resume" element={<ResumePL />} />
               <Route path="projects" element={<ProjectsPL />} />
               <Route path="contact" element={<ContactPL />} />
+            </Route>
+            <Route path="/en">
+              <Route
+                index
+                element={
+                  <div className="w-full h-full flex flex-col gap-2 justify-center items-center">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center">
+                      My name is <span className="text-themeOne">Dawid</span>!
+                    </h1>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl">
+                      Welcome to my portfolio
+                    </h2>
+                  </div>
+                }
+              />
+              <Route path="me" element={<Me />} />
+              <Route path="resume" element={<Resume />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="contact" element={<Contact />} />
             </Route>
 
             <Route

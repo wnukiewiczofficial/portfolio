@@ -10,7 +10,7 @@ import {
 
 import { useSpring, animated } from "react-spring";
 
-export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
+export default function NavBar({ cardRef, contentRef, navPopRef, english }) {
   const [selected, setSelected] = useState(0);
   const navRef = useRef();
   const navMove = useSpring({
@@ -37,57 +37,57 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
       <animated.nav
         ref={navRef}
         style={{ ...navPop, ...navMove }}
-        className="lg:hidden absolute h-20 bottom-0 left-1/2 w-5/6 rounded-2xl bg-themeTwo z-20"
+        className="lg:hidden absolute h-20 bottom-0 left-1/2 w-5/6 rounded-2xl bg-themeTwo z-20 shadow-lg shadow-themeTwo"
       >
         <ul className="flex w-full h-full items-center justify-around gap-2 p-2 text-sm font-semibold">
           <Link
-            to={polish ? "/pl/me" : "/me"}
+            to={english ? "/en/me" : "/me"}
             onClick={() => selected !== 1 && setSelected(1)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 1 && "text-themeOne bg-additionalOne"
             }`}
           >
             <HiUser className="text-4xl" />
-            <span>{polish ? "Ja" : "Me"}</span>
+            <span>{english ? "Me" : "Ja"}</span>
           </Link>
           <Link
-            to={polish ? "/pl/resume" : "/resume"}
+            to={english ? "/en/resume" : "/resume"}
             onClick={() => selected !== 2 && setSelected(2)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 2 && "text-themeOne bg-additionalOne"
             }`}
           >
             <HiClipboardList className="text-4xl" />
-            <span>{polish ? "Życiorys" : "Resume"}</span>
+            <span>{english ? "Resume" : "Życiorys"}</span>
           </Link>
           <Link
-            to={polish ? "/pl/projects" : "/projects"}
+            to={english ? "/en/projects" : "/projects"}
             onClick={() => selected !== 3 && setSelected(3)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 3 && "text-themeOne bg-additionalOne"
             }`}
           >
             <HiCode className="text-4xl" />
-            <span>{polish ? "Projekty" : "Projects"}</span>
+            <span>{english ? "Projects" : "Projekty"}</span>
           </Link>
           <Link
-            to={polish ? "/pl/contact" : "/contact"}
+            to={english ? "/en/contact" : "/contact"}
             onClick={() => selected !== 4 && setSelected(4)}
             className={`flex flex-col items-center gap-1 p-1 rounded-xl w-1/4 transition ${
               selected === 4 && "text-themeOne bg-additionalOne"
             }`}
           >
             <HiChatAlt className="text-4xl" />
-            <span>{polish ? "Kontakt" : "Contact"}</span>
+            <span>{english ? "Contact" : "Kontakt"}</span>
           </Link>
         </ul>
       </animated.nav>
       <div className="lg:hidden absolute flex h-20 justify-center items-center left-0 top-full translate-y-[150%] w-full p-4 transition duration-200 z-10">
         <Link
-          to={polish ? "/pl" : "/"}
+          to={english ? "/en" : "/"}
           onClick={() => selected > 0 && setSelected(0)}
         >
-          <HiChevronDoubleUp className="text-4xl bg-themeTwo rounded-full p-2" />
+          <HiChevronDoubleUp className="text-4xl bg-themeTwo shadow shadow-themeTwo rounded-full p-2" />
         </Link>
       </div>
 
@@ -98,44 +98,44 @@ export default function NavBar({ cardRef, contentRef, navPopRef, polish }) {
       >
         <ul className="w-full flex gap-4 h-auto items-center justify-around text-sm text-center font-semibold relative">
           <Link
-            to={polish ? "/pl/me" : "/me"}
+            to={english ? "/en/me" : "/me"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 1 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 1 && setSelected(1)}
           >
             <HiUser className="text-5xl" />
-            <span>{polish ? "Ja" : "Me"}</span>
+            <span>{english ? "Ja" : "Me"}</span>
           </Link>
           <Link
-            to={polish ? "/pl/resume" : "/resume"}
+            to={english ? "/en/resume" : "/resume"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 2 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 2 && setSelected(2)}
           >
             <HiClipboardList className="text-5xl" />
-            <span>{polish ? "Życiorys" : "Resume"}</span>
+            <span>{english ? "Resume" : "Życiorys"}</span>
           </Link>
           <Link
-            to={polish ? "/pl/projects" : "/projects"}
+            to={english ? "/en/projects" : "/projects"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 3 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 3 && setSelected(3)}
           >
             <HiCode className="text-5xl" />
-            <span>{polish ? "Projekty" : "Projects"}</span>
+            <span>{english ? "Projects" : "Projekty"}</span>
           </Link>
           <Link
-            to={polish ? "/pl/contact" : "/contact"}
+            to={english ? "/en/contact" : "/contact"}
             className={`flex flex-col items-center gap-1 py-2 px-4 rounded-lg active:scale-90 hover:bg-additionalOne hover:text-themeOne hover:-translate-y-1 transition ${
               selected === 4 && "text-themeOne bg-additionalOne"
             }`}
             onClick={() => selected !== 4 && setSelected(4)}
           >
             <HiChatAlt className="text-5xl" />
-            <span>{polish ? "Kontakt" : "Contact"}</span>
+            <span>{english ? "Contact" : "Kontakt"}</span>
           </Link>
         </ul>
       </animated.nav>
