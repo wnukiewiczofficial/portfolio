@@ -1,10 +1,8 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiLocationMarker, HiMail } from "react-icons/hi";
 import { TbBrandFiverr } from "react-icons/tb";
-import imgMe from "../assets/me.jpg";
+// import imgMe from "../assets/me.jpg";
 import { Link, useLocation } from "react-router-dom";
-import CVpl from "../assets/cv/CVpl.pdf";
-import CVen from "../assets/cv/CVen.pdf";
 
 export default function MyCard({ english }) {
   const location = useLocation();
