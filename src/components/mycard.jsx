@@ -63,22 +63,11 @@ export default function MyCard({ english }) {
           </div>
         </div>
       </div>
-      <div className="flex gap-2 text-lg lg:text-xl w-full p-2 justify-center">
-        <a
-          href={english ? CVen : CVpl}
-          download={
-            english ? "CV Dawid Wnukiewicz ENG" : "CV Dawid Wnukiewicz PL"
-          }
-          className="bg-themeOne px-4 lg:p-2 w-auto rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition"
-        >
-          Curriculum Vitae
-        </a>
-      </div>
       <Link
         to={
           english ? location.pathname.substring(3) : `/en${location.pathname}`
         }
-        className="bg-accent px-4 py-1 rounded-2xl shadow-inner shadow-themeTwo text-themeTwo text-sm hover:opacity-80 active:opacity-40 transition"
+        className="bg-themeOne px-6 lg:p-4 w-auto font-semibold rounded-xl hover:opacity-80 active:opacity-60 active:scale-90 transition"
       >
         {english ? "Switch to polish" : "Zmień na angielski"}
       </Link>
