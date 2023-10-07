@@ -105,7 +105,7 @@ export default function NavBar({ cardRef, contentRef, navPopRef, english }) {
             onClick={() => selected !== 1 && setSelected(1)}
           >
             <HiUser className="text-5xl" />
-            <span>{english ? "Ja" : "Me"}</span>
+            <span>{english ? "Me" : "Ja"}</span>
           </Link>
           <Link
             to={english ? "/en/resume" : "/resume"}

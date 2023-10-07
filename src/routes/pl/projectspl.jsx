@@ -21,7 +21,7 @@ export default function ProjectsPL() {
         title="ctx.Playground"
         description="ctx.Playground to strona z oryginalnymi grami i programami. Znajdziesz tam wszystkie gry i programy, które osobiście stworzyłem. Każdy wpis jest grywalny, a niektóre są indywidualnie hostowane. Istnieją programy, które starannie wybrałem do włączenia, mimo że stworzyłem nawet więcej niż to, co jest obecnie prezentowane."
         images={[ctxPlaygroundImage1, ctxPlaygroundImage2]}
-        github="https://github.com/wnukiewiczofficial/ctx.Playground"
+        // github="https://github.com/wnukiewiczofficial/ctx.Playground"
         href="https://wnukiewiczofficial.github.io/ctx.Playground/"
       />
       <ProjectCard
@@ -49,20 +49,20 @@ export default function ProjectsPL() {
         title="Haxball Game Room"
         description="Skrypt zarządzający pokojem w Haxball. Kiedyś grałem w tę grę, więc znalazłem sposób na stworzenie własnego zaawansowanego niestandardowego serwera z fajnymi funkcjami. Komendy, statystyki graczy, system afk. Skrypt musi być uruchomiony na usłudze Headless Haxball."
         images={[HaxballImage1, HaxballImage2]}
-        github="https://github.com/wnukiewiczofficial/haxballserver"
+        // github="https://github.com/wnukiewiczofficial/haxballserver"
       />
       <ProjectCard
         title="Weather App"
         description="Ta aplikacja pogodowa zapewnia aktualizacje w czasie rzeczywistym dla bieżących warunków pogodowych w określonej lokalizacji. Chociaż projekt jest obecnie w stanie surowym, głównym celem jest zapewnienie dokładnych i aktualnych prognoz pogody."
         images={[WeatherAppImage1, WeatherAppImage2]}
-        github="https://github.com/wnukiewiczofficial/weatherapp"
+        // github="https://github.com/wnukiewiczofficial/weatherapp"
       />
-      <ProjectCard
+      {/* <ProjectCard
         finished={false}
         title="ChatEm"
         description="ChatEm to aplikacja internetowa przeznaczona do czatowania w czasie rzeczywistym z innymi użytkownikami. Charakteryzuje się prostym i podstawowym wyglądem, a aplikacja wykorzystuje websockets do komunikacji. Rozwój aplikacji jest obecnie w toku i nie jest jeszcze w pełni ukończony. Funkcja czatu jest jednak w pełni funkcjonalna i działa."
         images={[ChatEmImage1, ChatEmImage2]}
-      />
+      /> */}
     </div>
   );
 }

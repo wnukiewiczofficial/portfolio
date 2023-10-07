@@ -21,7 +21,7 @@ export default function Projects() {
         title="ctx.Playground"
         description="ctx.Playground is a website with original games and programs. You will find there all the games and programs I have personally created. Every entry is playable, with some being individually hosted. There are programs I have carefully selected for inclusion, despite having created even more than what is currently featured."
         images={[ctxPlaygroundImage1, ctxPlaygroundImage2]}
-        github="https://github.com/wnukiewiczofficial/ctx.Playground"
+        // github="https://github.com/wnukiewiczofficial/ctx.Playground"
         href="https://wnukiewiczofficial.github.io/ctx.Playground/"
       />
       <ProjectCard
@@ -49,20 +49,20 @@ export default function Projects() {
         title="Haxball Game Room"
         description="A script that manages a haxball's game room. I once played this game so I found a way to create my own advanced custom server with cool features. Commands, player statistics, afk system. The script needs to be run on the Headless Haxball service."
         images={[HaxballImage1, HaxballImage2]}
-        github="https://github.com/wnukiewiczofficial/haxballserver"
+        // github="https://github.com/wnukiewiczofficial/haxballserver"
       />
       <ProjectCard
         title="Weather App"
         description="This weather application provides real-time updates for the current weather conditions in a specific location. While the design is currently in its raw state, the primary focus is on ensuring accurate and up-to-date weather forecasts."
         images={[WeatherAppImage1, WeatherAppImage2]}
-        github="https://github.com/wnukiewiczofficial/weatherapp"
+        // github="https://github.com/wnukiewiczofficial/weatherapp"
       />
-      <ProjectCard
+      {/* <ProjectCard
         finished={false}
         title="ChatEm"
         description="ChatEm is a web app designed for real-time chatting with other users. It features a simple and basic design, and the app utilizes websockets for communication. The development of the app is currently a work in progress, and it is not yet fully completed. However, the chat functionality is fully functional and operational."
         images={[ChatEmImage1, ChatEmImage2]}
-      />
+      /> */}
     </div>
   );
 }
