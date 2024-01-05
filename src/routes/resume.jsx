@@ -11,19 +11,16 @@ export default function Resume() {
           <span className="text-lg text-white">(2021 - 2022)</span>
         </h2>
         <p className="text-sm md:text-base lg:text-xl">
-          As an experienced freelancer, I have successfully undertaken game and
-          web application projects, collaborating with over 100 clients from
-          around the world while primarily communicating in English. My
-          expertise lies in developing games using a wide range of technologies,
-          including 2D and 3D graphics, database integration, form development,
-          data analysis, real-time integration, and audio elements. I have a
-          proven track record of delivering high-quality work and creating
-          responsive applications that offer seamless gameplay across all
-          devices. Additionally, I have a strong background in designing
-          visually appealing websites and creating engaging user interfaces.
-          Alongside executing client projects, I am skilled in generating
-          innovative ideas, assisting clients with academic assignments, and
-          troubleshooting existing programs.
+          As a freelancer, I developed games and web applications, collaborating
+          with over 100 clients from various parts of the world. I utilized
+          diverse technologies, including 2D and 3D graphics, database
+          integrations, form development, data analysis, real-time integrations,
+          and sound elements. I delivered high-quality work and created
+          responsive applications compatible with all devices. Additionally,
+          there were instances where I designed websites and various interfaces.
+          In addition to client projects, I endeavored to implement numerous
+          innovative ideas, assisted clients with academic tasks, and resolved
+          issues with existing software programs.
         </p>
         <h2 className="text-themeOne font-semibold text-2xl">
           Internship at Pro-Comp Computer Store{" "}

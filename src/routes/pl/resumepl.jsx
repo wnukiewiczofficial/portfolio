@@ -11,19 +11,16 @@ export default function ResumePL() {
           <span className="text-lg text-white">(2021 - 2022)</span>
         </h2>
         <p className="text-sm md:text-base lg:text-xl">
-          Jako freelancer miałem okazję pracować nad różnymi projektami gier i
-          aplikacji internetowych, współpracując z ponad 100 klientami z różnych
-          miejsc na świecie. Moje zadania obejmowały naprawę i konserwację
-          uszkodzonych komputerów, optymalizację urządzeń dla pracowników oraz
-          instalację i konfigurację drukarek, sieci i stanowisk pracy w różnych
-          firmach i szkołach. Przykładowo, zajmowałem się także naprawą i
-          montażem tablic interaktywnych w szkole. Dodatkowo, miałem okazję
-          stworzyć stronę internetową dla lokalnego przedszkola, gdzie tworzyłem
-          ją od podstaw wykorzystując język PHP i dodając system zarządzania
-          treścią oraz panel administracyjny. Pracowałem również nad projektami
-          gier, gdzie wykorzystywałem różne technologie, takie jak grafika 2D i
-          3D, integracja baz danych, tworzenie formularzy, analiza danych,
-          integracja w czasie rzeczywistym oraz elementy dźwiękowe.
+          Jako freelancer tworzyłem gry i aplikacje internetowe, współpracując z
+          ponad 100 klientami z różnych części świata. Używałem różnorodnych
+          technologii, w tym grafiki 2D i 3D, integracji baz danych, rozwijania
+          formularzy, analizy danych, integracji w czasie rzeczywistym oraz
+          elementów dźwiękowych. Dostarczałem wysokiej jakości prac i tworzyłem
+          responsywne aplikacje, kompatybilne na wszystkich urządzeniach.
+          Dodatkowo, zdażały się sytuacje gdzie projektowałem strony internetowe
+          i różne interfejsy. Oprócz realizacji projektów klientów, starałem sie
+          wdrażać wiele innowacyjnych pomysłów, pomagałem klientom w zadaniach
+          akademickich oraz rozwiązywałem problemy istniejących już programów.
         </p>
         <h2 className="text-themeOne font-semibold text-2xl">
           Praktyki w sklepie komputerowym Pro-Comp{" "}
