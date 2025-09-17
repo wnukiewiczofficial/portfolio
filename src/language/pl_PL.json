@@ -1,0 +1,59 @@
+{
+	"LBL_CONTACT": "Kontakt",
+	"LBL_ABOUT_ME": "O mnie",
+	"LBL_PROJECTS": "Projekty",
+	"LBL_RESUME": "Życiorys",
+	"LBL_CV": "CV",
+	"LBL_EXPERIENCE": "Doświadczenie",
+	"LBL_WHAT_I_DO": "Czym się zajmuję",
+	"LBL_SWITCH_LANGUAGE": "Zmień język",
+	"LBL_LOCATION": "Lokalizacja",
+	"LBL_ME": "Ja",
+	"INFO_ABOUT_ME": "Zajmuję się tworzeniem stron internetowych, aplikacji oraz gier webowych. Nie obce są mi bazy danych oraz inne podobne backendowe tematy. Mam aktywny profil na GitHubie, gdzie udostępniam kilka moich projektów. Posiadam komercyjne doświadczenie w pracy z klientami z całego świata. Pracowałem jako freelancer i tworzyłem aplikacje i gry webowe. Aktualnie, studiuję informatykę na Politechnice Poznańskiej, gdzie się doszkalam i próbuję nowych rzeczy.",
+	"job_history": [
+		{
+			"position": "Freelance Web/Game Developer",
+			"duration": "2021 - 2022",
+			"description": "Jako freelancer tworzyłem gry i aplikacje internetowe, współpracując z ponad 100 klientami z różnych części świata. Używałem różnorodnych technologii, w tym grafiki 2D i 3D, integracji baz danych, rozwijania formularzy, analizy danych, integracji w czasie rzeczywistym oraz elementów dźwiękowych. Dostarczałem wysokiej jakości prac i tworzyłem responsywne aplikacje, kompatybilne na wszystkich urządzeniach. Dodatkowo, zdażały się sytuacje gdzie projektowałem strony internetowe i różne interfejsy. Oprócz realizacji projektów klientów, starałem sie wdrażać wiele innowacyjnych pomysłów, pomagałem klientom w zadaniach akademickich oraz rozwiązywałem problemy istniejących już programów."
+		},
+		{
+			"position": "Praktyki w sklepie komputerowym Pro-Comp",
+			"duration": "2020",
+			"description": "Podczas mojej praktyki w sklepie komputerowym, zaangażowany byłem w różne aspekty, nie tylko sprzedaż sprzętu komputerowego. Byłem odpowiedzialny za naprawę uszkodzonych i wadliwych komputerów dla klientów, a także optymalizację urządzeń używanych przez innych pracowników w sklepie. Oprócz pracy w sklepie stacjonarnym, brałem udział w specjalnych projektach dla firmy. Obejmowały one zadania takie jak instalacja drukarek, konfiguracja sieci, naprawa urządzeń i uruchamianie stanowisk pracy w różnych firmach i szkołach. Zajmowałem się również naprawą i montażem tablic interaktywnych w szkole. Ponadto, stworzyłem stronę internetową dla lokalnego przedszkola jako zlecenie dla firmy, w której odbywałem praktykę. Opracowałem ją od podstaw, używając PHP, włączając przyjazny użytkownikowi system zarządzania treścią (CMS) i panel administracyjny. Pozwalało to na łatwe aktualizowanie treści, zarządzanie użytkownikami i dostosowywanie prostych elementów na stronie internetowej. Cała strona została zaprogramowana od podstaw."
+		}
+	],
+	"projects": {
+		"freelancer": {
+			"title": "100+ gier webowych i programów",
+			"description": "W przeszłości stworzyłem wiele gier internetowych i programów wykorzystujących JavaScript. Oprócz webowych gier i aplikacji, tworzyłem projekty w C++ z użyciem SDL2 oraz C# opartego o silnik Unity. W swoim życiu zaprogramowałem już wiele gier i programów, zarówno tych komercyjnych jak i personalnych. Niektóre z najbardziej znaczących projektów zostały zaprezentowane w ctx.Playground. Jednak ze względu na liczność gier i komplikacji w zebraniu ich wszystkich, wiele gier, programów zostało wykluczonych."
+		},
+		"pockety": {
+			"title": "Pockety",
+			"description": "Pockety to aplikacja internetowa przeznaczona do zarządzania osobistymi listami zadań. Posiada zaawansowany backend z wieloma imponującymi funkcjami. Użytkownicy mogą tworzyć, usuwać i przeglądać listy zadań, a także sortować je według różnych kryteriów. Aplikacja oferuje również funkcję kosza do przywracania przypadkowo usuniętych elementów. Ponadto użytkownicy mogą modyfikować właściwości, takie jak kolor, termin, opis i priorytet swoich zadań. Pockety świadczy usługi zarejestrowanym użytkownikom i wykorzystuje uwierzytelnianie oparte na poczcie e-mail do ważnych działań. Co ważne, oferuje nawet wersję demonstracyjną, która nie opiera się na zapleczu ani nie przechowuje prawdziwych danych. Jednak ze względu na obawy związane z bezpieczeństwem aplikacja nie jest obecnie publikowana i pozostaje w toku."
+		},
+		"chatem": {
+			"title": "ChatEm",
+			"description": "ChatEm to aplikacja internetowa przeznaczona do czatowania w czasie rzeczywistym z innymi użytkownikami. Charakteryzuje się prostym i podstawowym wyglądem. Aplikacja oparta jest o websockety. Program został zabezpieczony przed przeciążeniem i zapamiętywaniem niepotrzebnych wiadomości. Ten czat służy dosłownie tylko do komunikacji między tymi użytkownikami, którzy są połączeni."
+		},
+		"weatherapp": {
+			"title": "Weather App",
+			"description": "Aplikacja webowa pozwalająca sprawdzenie warunków pogodowych. Wszystkie dane pobierane są za pomocą zewnętrznego API. Aplikajca pomaga użytkownikowi pokazując listę wszystkich krajów. Listę można filtrować wyszukując jakąś konkretną miejscowość."
+		},
+		"portfolio": {
+			"title": "Portfolio",
+			"description": "Znajdujesz się obecnie na tej stronie. Strona Portfolio jest dla każdego, kto chce mnie lepiej poznać jako dewelopera. CV? Projekty? Kontakt? Wszystko jest tutaj."
+		},
+		"chardorob": {
+			"title": "ChardoRob",
+			"description": "ChardoRob to strona poświęcona winom domowej roboty. Osoba stojąca za tymi winami chciała zaprezentować i opisać każde z nich w Internecie. Jedną z godnych uwagi funkcji jest to, że każda butelka wina ma przypisany unikalny identyfikator QR. Gdy ktoś zeskanuje kod QR, zostanie bezpośrednio przekierowany do odpowiedniej sekcji wina na stronie internetowej ChardoRob."
+		},
+		"haxball": {
+			"title": "Haxball Game Room",
+			"description": "Skrypt zarządzający pokojem w Haxball. Kiedyś grałem w tę grę, więc znalazłem sposób na stworzenie własnego zaawansowanego niestandardowego serwera z fajnymi funkcjami. Komendy, statystyki graczy, system afk. Skrypt musi być uruchomiony na usłudze Headless Haxball."
+		},
+		"ctxplayground": {
+			"title": "ctx.Playground",
+			"description": "ctx.Playground to strona z oryginalnymi grami i programami. Są tam projekty, które osobiście stworzyłem. Każda gra jest grywalna, wiele z nich jest oddzielnie zhostowanych. Ta strona jednak nie zawiera dosłownie wszystkich moich tworów."
+		}
+	}
+}

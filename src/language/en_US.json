@@ -1,0 +1,59 @@
+{
+	"LBL_CONTACT": "Contact",
+	"LBL_ABOUT_ME": "About me",
+	"LBL_PROJECTS": "Projects",
+	"LBL_RESUME": "Resume",
+	"LBL_CV": "CV",
+	"LBL_EXPERIENCE": "Experience",
+	"LBL_WHAT_I_DO": "What I do",
+	"LBL_SWITCH_LANGUAGE": "Change language",
+	"LBL_LOCATION": "Location",
+	"LBL_ME": "Me",
+	"INFO_ABOUT_ME": "I am involved in creating websites, applications, and web games. I am also familiar with databases and other backend-related topics. I have an active profile on GitHub, where I share several of my projects. I have commercial experience working with clients from all over the world. I have worked as a freelancer, creating web applications and games. Currently, I am studying computer science at Poznań University of Technology, where I continue to learn and try out new things.",
+	"job_history": [
+		{
+			"position": "Freelance Web/Game Developer",
+			"duration": "2021 - 2022",
+			"description": "As a freelancer, I developed games and web applications, collaborating with over 100 clients from various parts of the world. I utilized diverse technologies, including 2D and 3D graphics, database integrations, form development, data analysis, real-time integrations, and sound elements. I delivered high-quality work and created responsive applications compatible with all devices. Additionally, there were instances where I designed websites and various interfaces. In addition to client projects, I endeavored to implement numerous innovative ideas, assisted clients with academic tasks, and resolved issues with existing software programs."
+		},
+		{
+			"position": "Internship at Pro-Comp Computer Store",
+			"duration": "2020",
+			"description": "During my internship at a computer store, I was involved in various aspects beyond sales of computer equipment. I was responsible for repairing damaged and faulty computers for customers, as well as optimizing devices used by other employees within the store. In addition to my work at the physical store, I participated in special projects for a company. This involved tasks such as installing printers, configuring networks, repairing devices, and setting up workstations in various businesses and schools. I also handled the repair and assembly of interactive whiteboards at a school. Furthermore, I created a website for a local kindergarten as a commissioned project for the company where I was interning. I developed it from scratch using PHP, incorporating a user-friendly content management system (CMS) and an administration panel. This allowed for easy content updates, user management, and customization of simple elements on the website. The entire website was programmed from the ground up."
+		}
+	],
+	"projects": {
+		"freelancer": {
+			"title": "100+ web games and programs",
+			"description": "In the past, I have created many online games and programs using JavaScript. In addition to web games and applications, I have worked on projects in C++ using SDL2, as well as C# based on the Unity engine. Throughout my life, I have already programmed many games and programs, both commercial and personal. Some of the most significant projects have been showcased on ctx.Playground. However, due to the sheer volume of games and the complexity of gathering them all, many games and programs have been excluded."
+		},
+		"pockety": {
+			"title": "Pockety",
+			"description": "Pockety is a web app designed for managing personal task lists. It boasts an advanced backend with numerous impressive features. Users can create, delete, and preview todos, as well as sort them by various criteria. The app also offers a trash feature for restoring accidentally removed items. Additionally, users can modify properties such as color, deadline, description, and priority of their todos. Pockety provides services to registered users and utilizes email-based authentication for important actions. Notably, it even offers a demo version that does not rely on a backend or store real data. However, due to security concerns, the app is currently unpublished and remains a work in progress."
+		},
+		"chatem": {
+			"title": "ChatEm",
+			"description": "ChatEm is a web application designed for real-time chatting with other users. It features a simple and basic interface. The application is built on websockets. It has safeguards in place to prevent overload and unnecessary message retention. This chat is strictly meant for communication between users who are connected."
+		},
+		"weatherapp": {
+			"title": "Weather App",
+			"description": "Web application allowing to check weather conditions. All data is retrieved using an external API. The application assists the user by displaying a list of all countries. The list can be filtered by searching for a specific location."
+		},
+		"portfolio": {
+			"title": "Portfolio",
+			"description": "You are currently on this website. The Portfolio website is for anyone who wants to know me better as a developer. CV? Projects? Contact? Everything will be found here."
+		},
+		"chardorob": {
+			"title": "ChardoRob",
+			"description": "ChardoRob is a website dedicated to homemade wines. The individual behind these wines wanted to showcase and describe each of them on the internet. One noteworthy feature is that every wine bottle is assigned a unique QR ID. When someone scans the QR code, it directly navigates them to the corresponding wine section on the ChardoRob website."
+		},
+		"haxball": {
+			"title": "Haxball Game Room",
+			"description": "A script that manages a haxball's game room. I once played this game so I found a way to create my own advanced custom server with cool features. Commands, player statistics, afk system. The script needs to be run on the Headless Haxball service."
+		},
+		"ctxplayground": {
+			"title": "ctx.Playground",
+			"description": "ctx.Playground is a website featuring original games and programs. It showcases projects that I personally created. Each game is playable, and many of them are separately hosted. However, this website does not include literally all of my creations."
+		}
+	}
+}
